@@ -16,6 +16,12 @@ Required Resources
 - [Course Lecture Notes](https://jncraton.github.io/dsa-cpsc2500/lectures/)
 - [Open Data Structures (in C++)](https://opendatastructures.org/ods-cpp/)
 
+Optional Resources
+------------------
+
+- [CS3 Data Structures and Algorithms](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/)
+- [Essential Algorithms: A Practical Approach to Computer Algorithms Using Python and C#](https://openlibrary.org/books/OL28723083M/Essential_Algorithms)
+
 Course Objectives
 -----------------
 
