@@ -15,6 +15,7 @@ Required Resources
 
 - [Course Lecture Notes](https://jncraton.github.io/dsa-cpsc2500/lectures/)
 - [Open Data Structures (in C++)](https://opendatastructures.org/ods-cpp/)
+- [Sorting Strategies](https://www.youtube.com/watch?v=Xw2D9aJRBY4&list=PLcX11VWS1PdA4dSPip8-1JfKxFa32X53y)
 
 Optional Resources
 ------------------
