@@ -59,7 +59,7 @@ learning_objectives:
 
 ---
 
-![Sets of numbers](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sets_of_numbers-ar.svg/960px-Sets_of_numbers-ar.svg.png){height=540px}
+![Sets of numbers](https://upload.wikimedia.org/wikipedia/commons/f/f3/Sets_of_numbers-en.svg){height=540px}
 
 ---
 
