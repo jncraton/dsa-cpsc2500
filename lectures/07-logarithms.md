@@ -1,9 +1,23 @@
 ---
-reading: '[OpenDSA Logarithms](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Logarithms.html)'
+reading: '[OpenDSA Misc Math](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/MiscMath.html),[OpenDSA Logarithms](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Logarithms.html)'
 teaching_goal: Students will understand logarithm definitions, properties, and why logs shape common algorithms
 learning_objectives:
   - Explain logarithms as inverses of exponentiation
 ---
+
+# Misc Math
+
+## Factorial
+
+## Permutations
+
+## Booleans
+
+## Logic Notation
+
+## Floor and Ceiling
+
+## Modulus
 
 # Logarithms
 
