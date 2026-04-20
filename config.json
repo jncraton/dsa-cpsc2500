@@ -1,0 +1,16 @@
+{
+  "start_date": "2026-01-14",
+  "end_date": "2026-05-01",
+  "lecture_days": "MTW",
+  "lab_days": "R",
+  "breaks": [
+    "2026-01-19 MLK",
+    "2026-03-09 Spring Break",
+    "2026-03-10 Spring Break",
+    "2026-03-11 Spring Break",
+    "2026-03-12 Spring Break",
+    "2026-03-13 Spring Break",
+    "2026-04-03 Good Friday",
+    "2026-04-06 Easter Monday"
+  ]
+}
