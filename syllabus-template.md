@@ -14,6 +14,7 @@ Required Resources
 ------------------
 
 - [Course Lecture Notes](https://jncraton.github.io/dsa-cpsc2500/lectures/)
+- [Open Data Structures (in C++)](https://opendatastructures.org/ods-cpp/)
 
 Course Objectives
 -----------------
