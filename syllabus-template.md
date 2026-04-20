@@ -21,6 +21,17 @@ Course Objectives
 
 Upon completion of this course, students will be able to:
 
+- Represent a problem as a set of abstract data structures.
+- Choose an appropriate data structure for a given problem: unordered or ordered array, stack,
+queue, tree, or graph
+- Describe the differences among searching and sorting algorithms, including sequential,
+binary, bubble, merge, quick, heap, and radix.
+- Use Big-O notation to describe the computational complexity of an algorithm or data
+structure.
+- Implement stacks and queues using linked lists and arrays.
+- Use recursion to conduct preorder, inorder, and postorder tree traversals.
+- Utilize data structures to solve complex problems rooted in real-world situations.
+
 Course Overview
 ---------------
 
