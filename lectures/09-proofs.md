@@ -126,4 +126,6 @@ Show that if $n^2$ is even, then $n$ is even using a proof by contradiction or c
 - Clear argumentation honors truth and good stewardship
 - Mathematical structure supports disciplined thinking
 
+---
+
 How can proof techniques help you build more reliable algorithms?
