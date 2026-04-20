@@ -31,10 +31,10 @@ learning_objectives:
 
 ## Example direct proof
 
-- Claim: \(\sum_{i=1}^n i = \frac{n(n+1)}2\)
-- Pair first and last terms: \(1 + n = n+1\)
-- There are \(n/2\) such pairs when \(n\) is even
-- The same idea holds when \(n\) is odd
+- Claim: $\sum_{i=1}^n i = \frac{n(n+1)}2$
+- Pair first and last terms: $1 + n = n+1$
+- There are $n/2$ such pairs when $n$ is even
+- The same idea holds when $n$ is odd
 
 ---
 
@@ -49,25 +49,25 @@ How does a direct proof make the structure of a formula more visible?
 ## Contradiction example
 
 - Theorem: there is no largest integer
-- Assume a largest integer \(B\) exists
-- Then \(B+1\) is an integer and \(B+1 > B\)
-- Contradiction: \(B\) was not largest
+- Assume a largest integer $B$ exists
+- Then $B+1$ is an integer and $B+1 > B$
+- Contradiction: $B$ was not largest
 
 ## Contrapositive
 
-- Instead of proving \(P \Rightarrow Q\), prove \(\neg Q \Rightarrow \neg P\)
+- Instead of proving $P \Rightarrow Q$, prove $\neg Q \Rightarrow \neg P$
 - The contrapositive is logically equivalent to the original claim
 - It can simplify proofs about functions, sets, and order
 
 ## Exercise
 
-Show that if \(n^2\) is even, then \(n\) is even using a proof by contradiction or contrapositive.
+Show that if $n^2$ is even, then $n$ is even using a proof by contradiction or contrapositive.
 
 ## Mathematical induction
 
-- [Mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction) proves a claim for all integers \(n \ge c\)
+- [Mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction) proves a claim for all integers $n \ge c$
 - Base case: verify the claim for the smallest value
-- Induction step: assume it holds for \(n-1\), then prove it for \(n\)
+- Induction step: assume it holds for $n-1$, then prove it for $n$
 
 ## Induction hypothesis
 
@@ -77,37 +77,37 @@ Show that if \(n^2\) is even, then \(n\) is even using a proof by contradiction 
 
 ## Strong induction
 
-- Strong induction assumes the claim holds for all values below \(n\)
+- Strong induction assumes the claim holds for all values below $n$
 - Often easier for existence proofs or claims with multiple predecessors
 - It is logically equivalent to ordinary induction
 
 ## Sum formula by induction
 
-- Claim: \(\sum_{i=1}^n i = n(n+1)/2\)
-- Base case: \(n=1\) gives \(1 = 1\)
-- Induction: assume \(\sum_{i=1}^{n-1} i = (n-1)n/2\)
-- Add \(n\) and simplify to get \(n(n+1)/2\)
+- Claim: $\sum_{i=1}^n i = n(n+1)/2$
+- Base case: $n=1$ gives $1 = 1$
+- Induction: assume $\sum_{i=1}^{n-1} i = (n-1)n/2$
+- Add $n$ and simplify to get $n(n+1)/2$
 
 ## Odd numbers by induction
 
-- Claim: \(\sum_{i=1}^n (2i-1) = n^2\)
-- Base case: \(1 = 1^2\)
-- Assume the first \(n-1\) odd numbers sum to \((n-1)^2\)
-- Add the \(n\)th odd number \(2n-1\) and simplify
+- Claim: $\sum_{i=1}^n (2i-1) = n^2$
+- Base case: $1 = 1^2$
+- Assume the first $n-1$ odd numbers sum to $(n-1)^2$
+- Add the $n$th odd number $2n-1$ and simplify
 
 ## Recurrence proof
 
-- Claim: \(T(n) = T(n-1)+1\) with \(T(1)=0\) gives \(T(n)=n-1\)
-- Base case: \(T(2)=1\)
-- Assume \(T(n-1)=n-2\)
-- Then \(T(n)=n-1\)
+- Claim: $T(n) = T(n-1)+1$ with $T(1)=0$ gives $T(n)=n-1$
+- Base case: $T(2)=1$
+- Assume $T(n-1)=n-2$
+- Then $T(n)=n-1$
 
 ## Strong induction example
 
-- Claim: any integer \(n>1\) is divisible by some prime
-- Base case: \(2\) is prime
-- Induction: if \(n\) is composite, factor \(n = ab\)
-- A factor less than \(n\) has a prime divisor by hypothesis
+- Claim: any integer $n>1$ is divisible by some prime
+- Base case: $2$ is prime
+- Induction: if $n$ is composite, factor $n = ab$
+- A factor less than $n$ has a prime divisor by hypothesis
 
 ---
 
