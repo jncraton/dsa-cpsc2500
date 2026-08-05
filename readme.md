@@ -15,16 +15,16 @@ Email
 ## Office hours
 
 Monday
-~ 11am - noon, 2pm - 3:30pm
+~ 11am - 12:00pm, 2:00pm - 3:30pm
 
 Tuesday
-~ 9am - 11am, 2pm - 3:30pm
+~ 10:00am - 11:00am, 2:00pm - 3:30pm
 
 Wednesday
-~ 11am - noon
+~ 10:00am - 12:00pm
 
-Friday
-~ 11am - noon
+Thursday
+~ 11:00am - 12:00pm
 
 Office
 ~ Decker 305
@@ -40,11 +40,30 @@ Required Resources
 ------------------
 
 - [Course Lecture Notes](https://jncraton.github.io/dsa-cpsc2500/lectures/)
+- [CS3 Data Structures and Algorithms](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/)
+- [Sorting Strategies](https://www.youtube.com/watch?v=Xw2D9aJRBY4&list=PLcX11VWS1PdA4dSPip8-1JfKxFa32X53y)
+
+Optional Resources
+------------------
+
+- [Open Data Structures (in C++)](https://opendatastructures.org/ods-cpp/)
+- [Essential Algorithms: A Practical Approach to Computer Algorithms Using Python and C#](https://openlibrary.org/books/OL28723083M/Essential_Algorithms)
 
 Course Objectives
 -----------------
 
 Upon completion of this course, students will be able to:
+
+- Represent a problem as a set of abstract data structures.
+- Choose an appropriate data structure for a given problem: unordered or ordered array, stack,
+queue, tree, or graph
+- Describe the differences among searching and sorting algorithms, including sequential,
+binary, bubble, merge, quick, heap, and radix.
+- Use Big-O notation to describe the computational complexity of an algorithm or data
+structure.
+- Implement stacks and queues using linked lists and arrays.
+- Use recursion to conduct preorder, inorder, and postorder tree traversals.
+- Utilize data structures to solve complex problems rooted in real-world situations.
 
 Course Overview
 ---------------
