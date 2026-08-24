@@ -1,6 +1,3 @@
----
-...
-
 # CPSC 2500 Data Structures and Algorithms
 
 ## About Me
