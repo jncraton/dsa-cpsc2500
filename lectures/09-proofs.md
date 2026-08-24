@@ -1,5 +1,5 @@
 ---
-reading: '[OpenDSA Proofs](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Proofs.html)'
+reading: '[Proofs](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Proofs.html)'
 teaching_goal: Students will learn the structure and use of mathematical proof techniques to support algorithmic reasoning
 learning_objectives:
   - Describe direct proof, proof by contradiction, and mathematical induction

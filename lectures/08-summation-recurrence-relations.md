@@ -1,5 +1,5 @@
 ---
-reading: '[OpenDSA Summations](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Summations.html),[OpenDSA Recurrence Relations](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/RecurrenceIntro.html)'
+reading: '[Summations](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Summations.html),[Recurrence Relations](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/RecurrenceIntro.html)'
 teaching_goal: Students will connect summation notation and recurrence relations to algorithm analysis and closed-form reasoning
 learning_objectives:
   - Interpret sigma notation and translate summations into expanded sums
