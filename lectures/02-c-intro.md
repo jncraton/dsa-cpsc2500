@@ -6,6 +6,7 @@ learning_objectives:
   - Implement conditional logic using if-else
   - Use for-loops to iterate a set number of times
   - Define and call functions to modularize code
+reading: '[Hello World](https://en.wikibooks.org/wiki/C_programming/Intro_exercise)'
 ---
 
 # C Programming
