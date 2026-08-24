@@ -1,5 +1,4 @@
 ---
-reading: '[ODS: Intro](https://opendatastructures.org/ods-cpp/1_Introduction.html)'
 ...
 
 # CPSC 2500 Data Structures and Algorithms
