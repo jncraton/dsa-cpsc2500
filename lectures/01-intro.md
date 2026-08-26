@@ -5,7 +5,7 @@
 ---
 
 - Professor Craton
-- Father of two kids - Josiah (3) and Benji (10)
+- Father of two kids - Josiah (4) and Benji (10)
 - Married to Karin
 - We live in Anderson near campus
 
@@ -27,7 +27,8 @@ Anything you want to know about me?
 ## Introductions
 
 - Name
-- Favorite place you went over the break
+- Major
+- How do you hope to use software in your future?
 
 ## Syllabus
 
@@ -37,3 +38,15 @@ Anything you want to know about me?
 
 - Given regularly at beginning and end of class
 - Allow me to confirm that everyone is keeping up with course material
+
+---
+
+![AI solves every data structures lab I was assigned as a student](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/ChatGPT_essay_draft.png/960px-ChatGPT_essay_draft.png){height=540px}
+
+---
+
+![The TI-89 from 1998 can solve integrals symbolically](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/TI-89.jpg/250px-TI-89.jpg){height=540px}
+
+## Critical Question
+
+> I asked a meaningful question or helped a peer learn in class today.
