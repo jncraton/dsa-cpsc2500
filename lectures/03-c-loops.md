@@ -1,3 +1,7 @@
+---
+reading: '[C Flow Control](https://en.wikibooks.org/wiki/C_programming/Program_flow_control), [C Functions](https://en.wikibooks.org/wiki/C_programming/Procedures_and_functions)'
+---
+
 # C Loops and Functions
 
 ## Loops
