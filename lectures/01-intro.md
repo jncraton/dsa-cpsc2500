@@ -41,11 +41,11 @@ Anything you want to know about me?
 
 ---
 
-![AI solves every data structures lab I was assigned as a student](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/ChatGPT_essay_draft.png/960px-ChatGPT_essay_draft.png){height=540px}
+![AI solves every data structures lab I was assigned as a student](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/ChatGPT_essay_draft.png/500px-ChatGPT_essay_draft.png){height=540px}
 
 ---
 
-![The TI-89 from 1998 can solve integrals symbolically](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/TI-89.jpg/250px-TI-89.jpg){height=540px}
+![The TI-89 from 1998 can solve integrals symbolically](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/TI-89.jpg/500px-TI-89.jpg){height=540px}
 
 ## Critical Question
 
