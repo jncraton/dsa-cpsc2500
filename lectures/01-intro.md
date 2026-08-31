@@ -50,3 +50,9 @@ Anything you want to know about me?
 ## Critical Question
 
 > I asked a meaningful question or helped a peer learn in class today.
+
+## Course Themes
+
+1. Common data structures and algorithms to add to your toolkit
+2. Costs and benefits of different choices
+3. Precise peformance measurement and analysis
