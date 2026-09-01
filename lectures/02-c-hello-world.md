@@ -55,9 +55,18 @@ char grade = 'A';
 - `%f`: Float
 - `%c`: Character
 
+## Input Values
+
+- `scanf`: Reads input from the user
+- `%d`: Reads an integer
+- `%f`: Reads a float
+- `%c`: Reads a character
+
 ```c
-printf("Age: %d\n", age);
-printf("Price: %.2f\n", price);
+printf("Enter your age: ");
+int age;
+scanf("%d", &age);
+printf("Your age is: %d\n", age);
 ```
 
 ## Conditionals
