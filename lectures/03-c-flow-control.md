@@ -4,7 +4,7 @@ reading: '[C Flow Control](https://en.wikibooks.org/wiki/C_programming/Program_f
 
 # C Loops and Functions
 
-## Loops
+## For Loops
 
 - `for` loops repeat code
 - Useful for counting
@@ -14,6 +14,25 @@ for (int i = 0; i < 5; i++) {
   printf("Count: %d\n", i);
 }
 ```
+
+## While Loops
+
+- Use `while` for condition-based repetition
+- Loop continues until condition is false
+
+```c
+int i = 0;
+while (i < 5) {
+  printf("Count: %d\n", i);
+  i++;
+}
+```
+
+## While vs For
+
+- `for` is best for fixed ranges
+- `while` is best for state changes
+- Both rely on a loop variable
 
 ## Functions
 
