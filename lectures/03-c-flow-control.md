@@ -59,5 +59,6 @@ int main() {
 
 ## Problems
 
-- https://open.kattis.com/problems/different
-- https://open.kattis.com/problems/abc
+- <https://open.kattis.com/problems/cold>
+- <https://open.kattis.com/problems/different>
+- <https://open.kattis.com/problems/abc>
