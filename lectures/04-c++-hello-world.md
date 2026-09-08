@@ -78,17 +78,18 @@ if (age >= 18) {
 ## Full Example
 
 ```cpp
+#include <print>
 #include <iostream>
 
 int main() {
   int age;
-  std::cout << "Enter your age: ";
+  std::println("Enter your age: ");
   std::cin >> age;
 
-  if (age >= 18) {
+  if (age >= 13) {
     std::println("Welcome to the site.");
   } else {
-    std::println("Access denied.");
+    std::println("You must be over 13 to access this site.");
   }
   return 0;
 }
