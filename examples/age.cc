@@ -6,6 +6,8 @@ int main() {
   std::println("Enter your age: ");
   std::cin >> age;
 
+  std::println("{}", age);
+
   if (age >= 13) {
     std::println("Welcome to the site.");
   } else {
