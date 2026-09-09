@@ -150,4 +150,4 @@ int main() {
 
 ## Exercise
 
-Write a program that allocates an array of 10 integers using `malloc`, fills them with numbers 1-10, prints them, and then frees the memory.
+Write a program that allocates an array of 10 integers using `malloc`, fills it with the first 10 square numbers, prints them, and then frees the memory.
