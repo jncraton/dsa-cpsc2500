@@ -5,6 +5,7 @@ learning_objectives:
   - Map array indices to memory offsets
   - Define and instantiate structs to group related data
   - Use pointers to navigate arrays and access struct members
+reading: '[Arrays](https://en.wikibooks.org/wiki/C_programming/Arrays_and_strings), [Advanced Data Types](https://en.wikibooks.org/wiki/C_programming/Advanced_data_types)'
 ---
 
 # Arrays and Structs
