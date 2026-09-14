@@ -4,6 +4,7 @@ learning_objectives:
   - Define pointers and the address-of operator
   - Use malloc and free to allocate and deallocate memory on the heap
   - Identify the risks of memory leaks and dangling pointers
+reading: '[Pointers](https://en.wikibooks.org/wiki/C_programming/Pointers_and_arrays)'
 ---
 
 # Pointers and Memory
