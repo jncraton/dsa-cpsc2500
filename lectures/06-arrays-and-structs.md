@@ -41,6 +41,8 @@ int main() {
 - Allocated on the heap using `malloc`
 - Allows the size to be determined at runtime
 
+---
+
 ```cpp
 #include <print>
 
@@ -82,6 +84,8 @@ struct Student {
 - Create variables of the struct type
 - Access members using the dot `.` operator
 
+---
+
 ```cpp
 #include <print>
 
@@ -102,6 +106,8 @@ int main() {
 
 - Pointers can store the address of a struct
 - Use the arrow `->` operator to access members via a pointer
+
+---
 
 ```cpp
 #include <print>
@@ -124,6 +130,8 @@ int main() {
 
 - Combine arrays and structs to manage lists of objects
 - Common pattern for database-like records in memory
+
+---
 
 ```cpp
 #include <print>
