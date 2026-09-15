@@ -44,9 +44,9 @@ public:
 
 ## Access Specifiers
 
+- Protect internal state from invalid modifications
 - `private` is accessible only from within member functions of the same class
-- `public`: is accessible from outside the class
-- Protects internal state from invalid modifications
+- `public` is accessible from outside the class
 
 ## Instantiating Objects
 
@@ -75,7 +75,7 @@ public:
 };
 
 int main() {
-  Rectangle rect; // Stack allocation
+  Rectangle rect;
   rect.setDimensions(5, 10);
   std::println("Area: {}", rect.area());
   return 0;
@@ -111,9 +111,12 @@ public:
 
 ## Member Initialization Lists
 
-- Syntax: `Constructor(args) : member1(val1), member2(val2) {}`
-- More efficient than assignment inside the constructor body
-- Required for const members and references
+- Shorter than assignment inside the constructor body
+- Syntax: 
+
+```cpp
+Constructor(args) : member1(val1), member2(val2) {}
+```
 
 ---
 
@@ -140,10 +143,12 @@ int main() {
 }
 ```
 
-## The `this` Pointer
+## `this` Pointer
 
 - Every object has access to its own address through the `this` pointer
 - Used to resolve name conflicts between member variables and parameters
+
+---
 
 ```cpp
 class Rectangle {
