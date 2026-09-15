@@ -15,9 +15,9 @@ public:
 };
 
 int main() {
-  Rectangle r;
+  Rectangle rect;
 
-  r.setDimensions(10, 20);
+  rect.setDimensions(10, 20);
 
-  std::println("{}", r.area());
+  std::println("Area: {}", rect.area());
 }
