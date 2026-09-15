@@ -1,5 +1,5 @@
-#include <print>
 #include <iostream>
+#include <print>
 
 int main() {
   int age;

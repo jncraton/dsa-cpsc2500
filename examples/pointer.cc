@@ -2,7 +2,7 @@
 
 int main() {
   int a = 5;
-  void* ptr = &a;
+  void *ptr = &a;
 
   std::println("{} {}", a, ptr);
 }

@@ -2,7 +2,7 @@
 
 int main() {
   int size = 5;
-  int* arr = static_cast<int*>(std::malloc(size * sizeof(int)));
+  int *arr = static_cast<int *>(std::malloc(size * sizeof(int)));
 
   for (int i = 0; i < size; i++) {
     arr[i] = i * 10;

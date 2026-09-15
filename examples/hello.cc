@@ -1,5 +1,3 @@
 #include <print>
 
-int main() {
-  std::println("Hello, world");
-}
+int main() { std::println("Hello, world"); }
