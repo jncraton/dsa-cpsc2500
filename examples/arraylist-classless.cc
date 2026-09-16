@@ -1,4 +1,3 @@
-#include <print>
 #include <cassert>
 #include <cstddef>
 #include <stdexcept>
@@ -31,30 +30,6 @@ int get(const int *data, std::size_t size, int index) {
   }
 
   return data[index];
-}
-
-void pop(std::size_t &size) {
-  if (size > 0) {
-    size--;
-  }
-}
-
-void insert(int *&data, std::size_t &size, std::size_t &capacity,
-            int index, int value) {
-  if (index < 0 || static_cast<std::size_t>(index) > size) {
-    throw std::out_of_range("Index out of bounds");
-  }
-
-  if (size >= capacity) {
-    resize(data, size, capacity, capacity * 2);
-  }
-
-  for (std::size_t i = size; i > static_cast<std::size_t>(index); i--) {
-    data[i] = data[i - 1];
-  }
-
-  data[index] = value;
-  size++;
 }
 
 void remove(int *data, std::size_t &size, int value) {
@@ -101,6 +76,7 @@ int main() {
   assert(get(data, size, 0) == 1);
 
   append(data, size, capacity, 2);
+  assert(size == 2);
   assert(get(data, size, 0) == 1);
   assert(get(data, size, 1) == 2);
 
@@ -110,47 +86,33 @@ int main() {
   } catch (const std::out_of_range &) {
   }
 
-  pop(size);
-  assert(get(data, size, 0) == 1);
-  assert(size == 1);
-
-  pop(size);
-  assert(size == 0);
-
-  append(data, size, capacity, 1);
-  append(data, size, capacity, 2);
-  assert(size == 2);
-
-  insert(data, size, capacity, 0, 0);
-  assert(get(data, size, 0) == 0);
-  assert(get(data, size, 1) == 1);
-  assert(get(data, size, 2) == 2);
-  assert(size == 3);
-
-  insert(data, size, capacity, 1, 100);
-  assert(get(data, size, 1) == 100);
-  assert(size == 4);
-
-  insert(data, size, capacity, 2, 200);
-  assert(get(data, size, 2) == 200);
-  assert(size == 5);
-
+  append(data, size, capacity, 0);
+  append(data, size, capacity, 100);
+  append(data, size, capacity, 200);
   append(data, size, capacity, 2);
   append(data, size, capacity, 2);
+
   assert(size == 7);
+  assert(get(data, size, 0) == 1);
+  assert(get(data, size, 1) == 2);
+  assert(get(data, size, 2) == 0);
+  assert(get(data, size, 3) == 100);
+  assert(get(data, size, 4) == 200);
+  assert(get(data, size, 5) == 2);
+  assert(get(data, size, 6) == 2);
+
   assert(count(data, size, 2) == 3);
   assert(count(data, size, 100) == 1);
 
   remove(data, size, 2);
   assert(size == 6);
   assert(count(data, size, 2) == 2);
-  assert(get(data, size, 0) == 0);
-  assert(get(data, size, 1) == 100);
-  assert(get(data, size, 2) == 200);
-  assert(get(data, size, 3) == 1);
+  assert(get(data, size, 0) == 1);
+  assert(get(data, size, 1) == 0);
+  assert(get(data, size, 2) == 100);
+  assert(get(data, size, 3) == 200);
   assert(get(data, size, 4) == 2);
-  assert(get(data, size, 4) == 2);
-  assert(get(data, size, 4) == 2);
+  assert(get(data, size, 5) == 2);
 
   try {
     remove(data, size, 999);
