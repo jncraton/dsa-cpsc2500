@@ -36,45 +36,127 @@ reading: '[Dynamic Arrays](https://en.wikipedia.org/wiki/Dynamic_array), [Python
 
 ## Dynamic Array Design
 
-- An `ArrayList` class encapsulates a heap array pointer, current `size`, and allocated `capacity`
+- Operating systems don't generally provide auto-growing memory allocations
+- We could track the `capacity` of a memory allocation and grow it as array `size` increases
 - When `size == capacity`, the list automatically resizes before adding new elements
+
+## Resize
+
+- Increases our capacity
+- Requires a new allocation and copying values
 
 ---
 
 ```cpp
-#include <cassert>
-#include <print>
-#include <stdexcept>
+void resize(int *&data, std::size_t size, std::size_t &capacity,
+            std::size_t new_capacity) {
+  int *new_data = new int[new_capacity];
 
-class ArrayList {
-private:
-  int *data;
-  size_t capacity;
-  size_t size;
+  for (std::size_t i = 0; i < size; i++) {
+    new_data[i] = data[i];
+  }
 
-  void resize(size_t new_capacity) {
-    int *new_data = new int[new_capacity];
-    for (size_t i = 0; i < size; i++) {
-      new_data[i] = data[i];
+  delete[] data;
+  data = new_data;
+  capacity = new_capacity;
+}
+```
+
+## Append
+
+- Increment `size`
+- May need to call `resize`
+- Places a new element at the end once we have `capacity`
+
+---
+
+```cpp
+void append(int *&data, std::size_t &size, std::size_t &capacity, int value) {
+  if (size >= capacity) {
+    resize(data, size, capacity, capacity * 2);
+  }
+
+  data[size] = value;
+  size++;
+}
+```
+
+## Get
+
+- Returns the element at an index
+- Throws on invalid indices
+
+---
+
+```cpp
+int get(const int *data, std::size_t size, int index) {
+  if (index < 0 || static_cast<std::size_t>(index) >= size) {
+    throw std::out_of_range("Index out of bounds");
+  }
+
+  return data[index];
+}
+```
+
+## Remove
+
+- Removes the first occurence of a value
+- Decrements `size`
+
+---
+
+```cpp
+void remove(int *data, std::size_t &size, int value) {
+  std::size_t index = 0;
+
+  while (index < size && data[index] != value) {
+    index++;
+  }
+
+  if (index == size) {
+    throw std::runtime_error("Value not found");
+  }
+
+  for (std::size_t i = index; i + 1 < size; i++) {
+    data[i] = data[i + 1];
+  }
+
+  size--;
+}
+```
+
+## Clear
+
+- Sets size to zero
+- Does not need to free memory or change capacity
+
+---
+
+```cpp
+void clear(std::size_t &size) {
+  size = 0;
+}
+```
+
+## Count
+
+- Counts the number of occurences of `value`
+- Returns an integer count
+
+---
+
+```cpp
+std::size_t count(const int *data, std::size_t size, int value) {
+  std::size_t result = 0;
+
+  for (std::size_t i = 0; i < size; i++) {
+    if (data[i] == value) {
+      result++;
     }
-    delete[] data;
-    data = new_data;
-    capacity = new_capacity;
   }
 
-public:
-  ArrayList() : capacity(4), size(0) {
-    data = new int[capacity];
-  }
-
-  ~ArrayList() {
-    delete[] data;
-  }
-
-  size_t get_size() const {
-    return size;
-  }
-};
+  return result;
+}
 ```
 
 ## Performance
