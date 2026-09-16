@@ -100,7 +100,7 @@ int get(const int *data, std::size_t size, int index) {
 
 ## Remove
 
-- Removes the first occurence of a value
+- Removes the first occurrence of a value
 - Decrements `size`
 
 ---
@@ -140,7 +140,7 @@ void clear(std::size_t &size) {
 
 ## Count
 
-- Counts the number of occurences of `value`
+- Counts the number of occurrences of `value`
 - Returns an integer count
 
 ---
