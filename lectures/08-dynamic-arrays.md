@@ -4,7 +4,7 @@ learning_objectives:
   - Explain the difference between logical size (`size`) and physical allocation capacity (`capacity`)
   - Describe Python-like dynamic list operations (`append`, `get`, `insert`, `pop`) in C++
   - Manage dynamic memory safely using constructors, destructors, and automated resizing
-reading: '[Dynamic Arrays](https://en.wikipedia.org/wiki/Dynamic_array), [Python Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)'
+reading: '[Dynamic Arrays](https://en.wikipedia.org/wiki/Dynamic_array), [Python Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists), [Array-based List Implementation](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListArray.html)'
 ---
 
 # Dynamic Arrays
