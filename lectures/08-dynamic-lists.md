@@ -21,6 +21,9 @@ reading: '[Dynamic Arrays](https://en.wikipedia.org/wiki/Dynamic_array), [Python
 
 - `append`
 - `__getitem__`
+- `remove`
+- `clear`
+- `count`
 - `insert`
 - `pop`
 
