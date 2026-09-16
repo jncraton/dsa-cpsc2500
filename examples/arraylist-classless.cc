@@ -1,3 +1,4 @@
+#include <print>
 #include <cassert>
 #include <cstddef>
 #include <stdexcept>
@@ -56,6 +57,40 @@ void insert(int *&data, std::size_t &size, std::size_t &capacity,
   size++;
 }
 
+void remove(int *data, std::size_t &size, int value) {
+  std::size_t index = 0;
+
+  while (index < size && data[index] != value) {
+    index++;
+  }
+
+  if (index == size) {
+    throw std::runtime_error("Value not found");
+  }
+
+  for (std::size_t i = index; i + 1 < size; i++) {
+    data[i] = data[i + 1];
+  }
+
+  size--;
+}
+
+void clear(std::size_t &size) {
+  size = 0;
+}
+
+std::size_t count(const int *data, std::size_t size, int value) {
+  std::size_t result = 0;
+
+  for (std::size_t i = 0; i < size; i++) {
+    if (data[i] == value) {
+      result++;
+    }
+  }
+
+  return result;
+}
+
 int main() {
   std::size_t capacity = 4;
   std::size_t size = 0;
@@ -84,17 +119,48 @@ int main() {
 
   append(data, size, capacity, 1);
   append(data, size, capacity, 2);
+  assert(size == 2);
 
   insert(data, size, capacity, 0, 0);
   assert(get(data, size, 0) == 0);
   assert(get(data, size, 1) == 1);
   assert(get(data, size, 2) == 2);
+  assert(size == 3);
 
   insert(data, size, capacity, 1, 100);
   assert(get(data, size, 1) == 100);
+  assert(size == 4);
 
   insert(data, size, capacity, 2, 200);
   assert(get(data, size, 2) == 200);
+  assert(size == 5);
+
+  append(data, size, capacity, 2);
+  append(data, size, capacity, 2);
+  assert(size == 7);
+  assert(count(data, size, 2) == 3);
+  assert(count(data, size, 100) == 1);
+
+  remove(data, size, 2);
+  assert(size == 6);
+  assert(count(data, size, 2) == 2);
+  assert(get(data, size, 0) == 0);
+  assert(get(data, size, 1) == 100);
+  assert(get(data, size, 2) == 200);
+  assert(get(data, size, 3) == 1);
+  assert(get(data, size, 4) == 2);
+  assert(get(data, size, 4) == 2);
+  assert(get(data, size, 4) == 2);
+
+  try {
+    remove(data, size, 999);
+    assert(false && "Should have thrown when value was not found");
+  } catch (const std::runtime_error &) {
+  }
+
+  clear(size);
+  assert(size == 0);
+  assert(count(data, size, 2) == 0);
 
   delete[] data;
 }
