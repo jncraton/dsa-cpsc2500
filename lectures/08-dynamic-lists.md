@@ -7,9 +7,9 @@ learning_objectives:
 reading: '[Dynamic Arrays](https://en.wikipedia.org/wiki/Dynamic_array), [Python Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)'
 ---
 
-# Dynamic Lists
+# Dynamic Arrays
 
-## Limitations of Static & Fixed Dynamic Arrays
+## Limitations of Arrays
 
 - C arrays have fixed size
 - Heap arrays can be sized at runtime, but cannot grow once allocated
@@ -76,6 +76,10 @@ public:
 
 ## Performance
 
-- Most `append` operations are quick because there is spare capacity.
+- Most `append` operations are quick because there is spare capacity
 - When capacity is exhausted, `resize()` takes more time
 - Because capacity doubles each time, costly resizes happen infrequently
+
+---
+
+![Resize Performance](https://upload.wikimedia.org/wikipedia/commons/3/31/Dynamic_array.svg){height=540px}
