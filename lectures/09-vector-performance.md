@@ -34,7 +34,7 @@ reading: '[std::vector](https://en.cppreference.com/cpp/container/vector)'
 ## Example Code
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -48,7 +48,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Time: " << diff.count() << "s\n";
+  std::println("Time: {}s", diff.count());
   return 0;
 }
 ```
@@ -58,7 +58,7 @@ int main() {
 Complete the code to measure how long it takes to fill a vector with 1,000,000 integers.
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -91,7 +91,7 @@ int main() {
 ## Measuring Access
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -106,7 +106,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Sum: " << sum << "\nTime: " << diff.count() << "s\n";
+  std::println("Sum: {}\nTime: {}s", sum, diff.count());
   return 0;
 }
 ```
@@ -129,7 +129,7 @@ Modify the code to measure the time taken to access 10,000,000 elements.
 ## Measuring Push Back
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -143,7 +143,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Time: " << diff.count() << "s\n";
+  std::println("Time: {}s", diff.count());
   return 0;
 }
 ```
@@ -162,7 +162,7 @@ int main() {
 ## Measuring Insert
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -174,7 +174,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Time: " << diff.count() << "s\n";
+  std::println("Time: {}s", diff.count());
   return 0;
 }
 ```
@@ -198,7 +198,7 @@ Measure the time taken to insert 1,000 elements at the beginning of a vector of 
 ## Measuring Pop Back
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -212,7 +212,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Time: " << diff.count() << "s\n";
+  std::println("Time: {}s", diff.count());
   return 0;
 }
 ```
@@ -231,7 +231,7 @@ int main() {
 ## Measuring Erase
 
 ```cpp
-#include <iostream>
+#include <print>
 #include <vector>
 #include <chrono>
 
@@ -243,7 +243,7 @@ int main() {
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
-  std::cout << "Time: " << diff.count() << "s\n";
+  std::println("Time: {}s", diff.count());
   return 0;
 }
 ```
