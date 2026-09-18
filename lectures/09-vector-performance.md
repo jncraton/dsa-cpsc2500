@@ -4,6 +4,7 @@ learning_objectives:
   - Identify which std::vector operations are fast and which are slow
   - Explain why certain operations (like insertion at the beginning) are costly
   - Use wall-clock time to evaluate the practical impact of data structure choices
+reading: '[std::vector](https://en.cppreference.com/cpp/container/vector)'
 ---
 
 # Vector Performance
