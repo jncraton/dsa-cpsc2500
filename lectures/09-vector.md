@@ -55,37 +55,18 @@ int main() {
 
 ## Exercise
 
-Complete the code to measure how long it takes to fill a vector with 1,000,000 integers.
-
-```cpp
-#include <print>
-#include <vector>
-#include <chrono>
-
-int main() {
-  std::vector<int> v;
-  // Start timer here
-  
-  for (int i = 0; i < 1000000; ++i) {
-    v.push_back(i);
-  }
-
-  // End timer here
-  // Print result
-  return 0;
-}
-```
+Modify the code to time the runtime for various sizes of vector. How does the time change as a function of size?
 
 ## Result
 
 - `push_back` is generally very fast
-- Amortized constant time
-- Most operations are efficient
+- How long does it take to add one element?
+- 1 million?
+- 1 billion?
 
 ## Accessing Elements
 
 - `v[i]` provides direct access
-- Constant time operation
 - Very fast for reading data
 
 ## Measuring Access
@@ -111,10 +92,6 @@ int main() {
 }
 ```
 
-## Exercise
-
-Modify the code to measure the time taken to access 10,000,000 elements.
-
 ## Result
 
 - Random access is extremely fast
@@ -126,38 +103,9 @@ Modify the code to measure the time taken to access 10,000,000 elements.
 - Fast because no shifting is needed
 - Only slow when resizing occurs
 
-## Measuring Push Back
-
-```cpp
-#include <print>
-#include <vector>
-#include <chrono>
-
-int main() {
-  std::vector<int> v;
-  auto start = std::chrono::high_resolution_clock::now();
-
-  for (int i = 0; i < 1000000; ++i) {
-    v.push_back(i);
-  }
-
-  auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> diff = end - start;
-  std::println("Time: {}s", diff.count());
-  return 0;
-}
-```
-
-## Result
-
-- `push_back` is the preferred way to grow a list
-- Efficient for building collections
-
 ## Inserting at Start
 
 - `v.insert(v.begin(), value)`
-- Requires shifting all existing elements
-- Very slow for large vectors
 
 ## Measuring Insert
 
@@ -167,10 +115,12 @@ int main() {
 #include <chrono>
 
 int main() {
-  std::vector<int> v(1000000);
+  std::vector<int> v(1);
   auto start = std::chrono::high_resolution_clock::now();
 
-  v.insert(v.begin(), 0);
+  for (int i = 0; i < 1e3; i++) {
+    v.insert(v.begin(), 1);
+  }
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
@@ -181,12 +131,11 @@ int main() {
 
 ## Exercise
 
-Measure the time taken to insert 1,000 elements at the beginning of a vector of size 100,000.
+Modify the code to time the runtime for various numbers of insertions. How does the time change as a function of insertions?
 
 ## Result
 
 - Inserting at the front is expensive
-- Cost grows linearly with vector size
 - Avoid this for large datasets
 
 ## Removing from End
@@ -225,8 +174,10 @@ int main() {
 ## Removing from Start
 
 - `v.erase(v.begin())`
-- Requires shifting all remaining elements
-- Very slow for large vectors
+
+---
+
+How would you expect this to perform?
 
 ## Measuring Erase
 
@@ -236,10 +187,18 @@ int main() {
 #include <chrono>
 
 int main() {
-  std::vector<int> v(1000000);
-  auto start = std::chrono::high_resolution_clock::now();
+  std::vector<int> v(1);
 
-  v.erase(v.begin());
+  int n = 1e5;
+
+  for (int i = 0; i < n; i++) {
+    v.push_back(i);
+  }
+
+  auto start = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < n; i++) {
+    v.erase(v.begin());
+  }
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
@@ -250,12 +209,11 @@ int main() {
 
 ## Exercise
 
-Measure the time taken to erase 100 elements from the beginning of a vector of size 100,000.
+How does performance change with size?
 
 ## Result
 
 - Erasing from the front is expensive
-- Cost grows linearly with vector size
 - Use a different structure if front-removal is frequent
 
 ## Summary of Costs
@@ -266,18 +224,8 @@ Measure the time taken to erase 100 elements from the beginning of a vector of s
 ## Choosing the Right Tool
 
 - Use `std::vector` for end-heavy operations
-- Consider `std::deque` or `std::list` for front-heavy operations
-
-## Stewardship of Resources
-
-- Efficient code respects the user's time
-- Good stewardship of CPU cycles is a form of care
-- We aim to write code that serves others well
+- Consider an alternative for front-heavy operations
 
 ---
 
 How might choosing the wrong data structure impact a system?
-
-## Exercise
-
-Write a program that measures the time difference between `push_back` and `insert(v.begin())` for a vector of 10,000 elements. Compare the results.
