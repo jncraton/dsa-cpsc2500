@@ -7,7 +7,7 @@ learning_objectives:
 reading: '[std::vector](https://en.cppreference.com/cpp/container/vector)'
 ---
 
-# Vector Performance
+# Vector
 
 ## std::vector
 
