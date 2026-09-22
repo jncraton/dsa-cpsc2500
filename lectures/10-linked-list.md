@@ -4,7 +4,7 @@ learning_objectives:
   - Identify limitations of static and dynamic arrays (contiguous memory, shifting overhead, reallocation cost)
   - Define a self-referential class (`Node`) containing public members for data and the next node
   - Implement basic linked list operations using constructors and direct member access for node creation, traversal, and insertion at the head
-  - Understand the trade-offs between arrays (O(1) random access) and linked lists (O(1) head insertion, O(n) traversal)
+  - Compare the performance of linked list operations (insertion at head, element access) against vector operations using wall-clock time
 reading: '[Linked Lists](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListLinked.html)'
 ---
 
@@ -13,18 +13,18 @@ reading: '[Linked Lists](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html
 ## Limitations of Arrays
 
 - Arrays require contiguous blocks of memory
-- Static arrays cannot grow or shrink; dynamic arrays require costly reallocation and copying
-- Inserting or deleting an element in the middle of an array requires shifting all subsequent elements
+- Static arrays cannot grow or shrink
+- Dynamic arrays require reallocation and copying
 
 ---
 
 ## Linked List
 
 - A sequence of nodes
-- Nodes do not need to be stored contiguously in memory
+- Nodes need not be stored contiguously in memory
 - Each node holds:
-  1. The data value being stored
-  2. The memory address of the next node in the sequence
+  1. A data value
+  2. The memory address of the next node
 
 ---
 
@@ -157,6 +157,124 @@ int main() {
 
 ---
 
+## Performance Comparison
+
+- We can compare linked lists to `std::vector` by measuring execution time
+- Use `std::chrono` to capture the "cost" of operations
+
+---
+
+```cpp
+#include <print>
+#include <vector>
+#include <chrono>
+
+class Node {
+public:
+  int data;
+  Node* next;
+  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+};
+
+void insertAtHead(Node*& head, int value) {
+  Node* newNode = new Node(value, head);
+  head = newNode;
+}
+
+int main() {
+  // Linked List Test
+  Node* listHead = nullptr;
+  auto startList = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < 100000; ++i) {
+    insertAtHead(listHead, i);
+  }
+  auto endList = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> diffList = endList - startList;
+  std::println("List Head Insertion: {}s", diffList.count());
+
+  // Vector Test
+  std::vector<int> vec;
+  auto startVec = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < 100000; ++i) {
+    vec.insert(vec.begin(), i);
+  }
+  auto endVec = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> diffVec = endVec - startVec;
+  std::println("Vector Head Insertion: {}s", diffVec.count());
+
+  // Cleanup
+  while (listHead != nullptr) {
+    Node* temp = listHead;
+    listHead = listHead->next;
+    delete temp;
+  }
+  return 0;
+}
+```
+
+## Result
+
+- Linked list head insertion is much faster
+- Vector head insertion requires shifting all existing elements
+
+## Element Access
+
+---
+
+```cpp
+#include <print>
+#include <vector>
+#include <chrono>
+
+class Node {
+public:
+  int data;
+  Node* next;
+  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+};
+
+int main() {
+  const int N = 100000;
+
+  // Linked List Test
+  Node* listHead = nullptr;
+  for (int i = 0; i < N; ++i) insertAtHead(listHead, i); // Helper needed or inline
+
+  auto startList = std::chrono::high_resolution_clock::now();
+  int sumList = 0;
+  for (int i = 0; i < N; ++i) {
+    Node* curr = listHead;
+    for (int j = 0; j < i; ++j) curr = curr->next;
+    sumList += curr->data;
+  }
+  auto endList = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> diffList = endList - startList;
+  std::println("List Access Sum: {}\nTime: {}s", sumList, diffList.count());
+
+  // Vector Test
+  std::vector<int> vec(N);
+  for (int i = 0; i < N; ++i) vec[i] = i;
+
+  auto startVec = std::chrono::high_resolution_clock::now();
+  long long sumVec = 0;
+  for (int i = 0; i < N; ++i) {
+    sumVec += vec[i];
+  }
+  auto endVec = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> diffVec = endVec - startVec;
+  std::println("Vector Access Sum: {}\nTime: {}s", sumVec, diffVec.count());
+
+  return 0;
+}
+```
+
+## Result
+
+- Vector access is nearly instantaneous
+- Linked list access time grows quadratically with the number of elements
+
+---
+
 |                     | Array | Linked List |
 |---------------------|-------|-------------|
 | Size | Fixed | Grows node by node |
@@ -164,6 +282,6 @@ int main() {
 | Insertion | Shift contents | Create one node |
 | Overhead | Low (only data storage) | High (extra pointer per node) |
 
-## Exercise
+---
 
-Implement a simple singly linked list of `char` nodes using a `Node` class with public members for `data` and `next` that spells the word `"C++"`. Write a function to traverse and print the list using direct member access (`node->data`, `node->next`), and ensure all dynamically allocated memory is properly freed using `delete`.
+When might we prefer linked lists over static or dynamic arrays?
