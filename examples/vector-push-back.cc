@@ -1,6 +1,6 @@
+#include <chrono>
 #include <print>
 #include <vector>
-#include <chrono>
 
 int main() {
   std::vector<int> v;

@@ -3,13 +3,13 @@
 class Node {
 public:
   int data;
-  Node* next;
+  Node *next;
 
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void printList(Node* head) {
-  Node* current = head;
+void printList(Node *head) {
+  Node *current = head;
   while (current != nullptr) {
     std::print("{} -> ", current->data);
     current = current->next;
@@ -19,16 +19,16 @@ void printList(Node* head) {
 
 int main() {
   // Allocate nodes
-  Node* first = new Node(10);
-  Node* second = new Node(20);
-  Node* third = new Node(30);
+  Node *first = new Node(10);
+  Node *second = new Node(20);
+  Node *third = new Node(30);
 
   // Connect nodes
   first->next = second;
   second->next = third;
 
   // Traverse and print
-  Node* current = first;
+  Node *current = first;
   while (current != nullptr) {
     std::println("Node data: {}", current->data);
     current = current->next;

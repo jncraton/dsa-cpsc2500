@@ -1,16 +1,16 @@
+#include <chrono>
 #include <print>
 #include <vector>
-#include <chrono>
 
 class Node {
 public:
   int data;
-  Node* next;
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node *next;
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void insertAtHead(Node*& head, int value) {
-  Node* newNode = new Node(value, head);
+void insertAtHead(Node *&head, int value) {
+  Node *newNode = new Node(value, head);
   head = newNode;
 }
 
@@ -18,14 +18,16 @@ int main() {
   const int N = 100000;
 
   // Linked List Test
-  Node* listHead = nullptr;
-  for (int i = 0; i < N; ++i) insertAtHead(listHead, i); // Helper needed or inline
+  Node *listHead = nullptr;
+  for (int i = 0; i < N; ++i)
+    insertAtHead(listHead, i); // Helper needed or inline
 
   auto startList = std::chrono::high_resolution_clock::now();
   long long sumList = 0;
   for (int i = 0; i < N; ++i) {
-    Node* curr = listHead;
-    for (int j = 0; j < i; ++j) curr = curr->next;
+    Node *curr = listHead;
+    for (int j = 0; j < i; ++j)
+      curr = curr->next;
     sumList += curr->data;
   }
   auto endList = std::chrono::high_resolution_clock::now();
@@ -34,7 +36,8 @@ int main() {
 
   // Vector Test
   std::vector<int> vec(N);
-  for (int i = 0; i < N; ++i) vec[i] = i;
+  for (int i = 0; i < N; ++i)
+    vec[i] = i;
 
   auto startVec = std::chrono::high_resolution_clock::now();
   long long sumVec = 0;

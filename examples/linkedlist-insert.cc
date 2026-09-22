@@ -1,22 +1,22 @@
+#include <chrono>
 #include <print>
 #include <vector>
-#include <chrono>
 
 class Node {
 public:
   int data;
-  Node* next;
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node *next;
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void insertAtHead(Node*& head, int value) {
-  Node* newNode = new Node(value, head);
+void insertAtHead(Node *&head, int value) {
+  Node *newNode = new Node(value, head);
   head = newNode;
 }
 
 int main() {
   // Linked List Test
-  Node* listHead = nullptr;
+  Node *listHead = nullptr;
   auto startList = std::chrono::high_resolution_clock::now();
   for (int i = 0; i < 100000; ++i) {
     insertAtHead(listHead, i);
@@ -37,7 +37,7 @@ int main() {
 
   // Cleanup
   while (listHead != nullptr) {
-    Node* temp = listHead;
+    Node *temp = listHead;
     listHead = listHead->next;
     delete temp;
   }

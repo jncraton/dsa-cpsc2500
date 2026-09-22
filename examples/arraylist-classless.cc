@@ -50,9 +50,7 @@ void remove(int *data, std::size_t &size, int value) {
   size--;
 }
 
-void clear(std::size_t &size) {
-  size = 0;
-}
+void clear(std::size_t &size) { size = 0; }
 
 std::size_t count(const int *data, std::size_t size, int value) {
   std::size_t result = 0;
