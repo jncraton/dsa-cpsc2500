@@ -271,7 +271,7 @@ int main() {
 ## Result
 
 - Vector access is nearly instantaneous
-- Linked list access time grows quadratically with the number of elements
+- Linked list access time grows with the number of elements
 
 ---
 
