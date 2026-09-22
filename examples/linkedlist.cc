@@ -19,9 +19,9 @@ void printList(Node *head) {
 
 int main() {
   // Allocate nodes
-  Node *first = new Node(10);
-  Node *second = new Node(20);
-  Node *third = new Node(30);
+  Node *first = new Node(12);
+  Node *second = new Node(99);
+  Node *third = new Node(37);
 
   // Connect nodes
   first->next = second;
