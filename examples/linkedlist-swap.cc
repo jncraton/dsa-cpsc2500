@@ -6,18 +6,18 @@
 class Node {
 public:
   int data;
-  Node* next;
+  Node *next;
 
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void insertAt(Node*& head, int value, int position) {
+void insertAt(Node *&head, int value, int position) {
   if (position == 0) {
     head = new Node(value, head);
     return;
   }
 
-  Node* current = head;
+  Node *current = head;
 
   for (int i = 0; i < position - 1 && current != nullptr; ++i) {
     current = current->next;
@@ -28,15 +28,17 @@ void insertAt(Node*& head, int value, int position) {
   }
 }
 
-void swapData(Node* head, int val1, int val2) {
-  Node* first = nullptr;
-  Node* second = nullptr;
+void swapData(Node *head, int val1, int val2) {
+  Node *first = nullptr;
+  Node *second = nullptr;
 
-  Node* current = head;
+  Node *current = head;
 
   while (current != nullptr) {
-    if (current->data == val1) first = current;
-    if (current->data == val2) second = current;
+    if (current->data == val1)
+      first = current;
+    if (current->data == val2)
+      second = current;
     current = current->next;
   }
 
@@ -45,7 +47,7 @@ void swapData(Node* head, int val1, int val2) {
   }
 }
 
-void swapVectorValues(std::vector<int>& values, int val1, int val2) {
+void swapVectorValues(std::vector<int> &values, int val1, int val2) {
   auto first = std::find(values.begin(), values.end(), val1);
   auto second = std::find(values.begin(), values.end(), val2);
 
@@ -54,9 +56,9 @@ void swapVectorValues(std::vector<int>& values, int val1, int val2) {
   }
 }
 
-void deleteList(Node*& head) {
+void deleteList(Node *&head) {
   while (head != nullptr) {
-    Node* temp = head;
+    Node *temp = head;
     head = head->next;
     delete temp;
   }
@@ -66,7 +68,7 @@ int main() {
   const int N = 1000000;
   const int SWAPS = 100;
 
-  Node* listHead = nullptr;
+  Node *listHead = nullptr;
   std::vector<int> vec;
 
   // Build the linked list by inserting at position zero
@@ -89,8 +91,7 @@ int main() {
   }
 
   auto endListSwap = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> listSwapTime =
-      endListSwap - startListSwap;
+  std::chrono::duration<double> listSwapTime = endListSwap - startListSwap;
 
   // Swap values in the vector
   auto startVectorSwap = std::chrono::high_resolution_clock::now();
@@ -105,10 +106,8 @@ int main() {
   std::chrono::duration<double> vectorSwapTime =
       endVectorSwap - startVectorSwap;
 
-  std::println("Linked list swap: {}s",
-               listSwapTime.count());
-  std::println("Vector swap: {}s",
-               vectorSwapTime.count());
+  std::println("Linked list swap: {}s", listSwapTime.count());
+  std::println("Vector swap: {}s", vectorSwapTime.count());
 
   deleteList(listHead);
 

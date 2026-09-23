@@ -6,18 +6,18 @@
 class Node {
 public:
   int data;
-  Node* next;
+  Node *next;
 
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void insertAt(Node*& head, int value, int position) {
+void insertAt(Node *&head, int value, int position) {
   if (position == 0) {
     head = new Node(value, head);
     return;
   }
 
-  Node* current = head;
+  Node *current = head;
 
   for (int i = 0; i < position - 1 && current != nullptr; ++i) {
     current = current->next;
@@ -28,32 +28,32 @@ void insertAt(Node*& head, int value, int position) {
   }
 }
 
-void removeValue(Node*& head, int value) {
+void removeValue(Node *&head, int value) {
   if (head == nullptr) {
     return;
   }
 
   if (head->data == value) {
-    Node* temp = head;
+    Node *temp = head;
     head = head->next;
     delete temp;
     return;
   }
 
-  Node* current = head;
+  Node *current = head;
 
   while (current->next != nullptr && current->next->data != value) {
     current = current->next;
   }
 
   if (current->next != nullptr) {
-    Node* temp = current->next;
+    Node *temp = current->next;
     current->next = current->next->next;
     delete temp;
   }
 }
 
-void removeVectorValue(std::vector<int>& values, int value) {
+void removeVectorValue(std::vector<int> &values, int value) {
   auto position = std::find(values.begin(), values.end(), value);
 
   if (position != values.end()) {
@@ -61,9 +61,9 @@ void removeVectorValue(std::vector<int>& values, int value) {
   }
 }
 
-void deleteList(Node*& head) {
+void deleteList(Node *&head) {
   while (head != nullptr) {
-    Node* temp = head;
+    Node *temp = head;
     head = head->next;
     delete temp;
   }
@@ -73,7 +73,7 @@ int main() {
   const int N = 100000;
   const int REMOVES = 1000;
 
-  Node* listHead = nullptr;
+  Node *listHead = nullptr;
   std::vector<int> vec;
 
   for (int i = 0; i < N; ++i) {
