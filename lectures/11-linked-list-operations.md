@@ -178,17 +178,6 @@ int main() {
 }
 ```
 
-## Results
-
-- `push_back` on a list without a tail pointer is slow
-- `vector::push_back` is much faster due to amortized constant time
-- `insert` and `remove` in the middle are similar in behavior
-- `swap` is efficient as it avoids pointer manipulation
-
----
-
-How does the lack of a tail pointer affect the efficiency of adding elements to the end of a list?
-
 ## Exercise
 
 Implement a function `countNodes(Node* head)` that returns the number of nodes in a list. Verify the size of your list after several `pushBack` and `removeValue` operations. How does time required to count nodes change with list size?
