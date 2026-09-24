@@ -50,6 +50,87 @@ void pushBackTail(Node*& head, Node*& tail, int value) {
 }
 ```
 
+## Performance
+
+
+---
+
+```cpp
+#include <print>
+#include <vector>
+#include <chrono>
+
+class Node {
+public:
+  int data;
+  Node* next;
+  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+};
+
+void pushBack(Node*& head, int value) {
+  if (head == nullptr) {
+    head = new Node(value);
+    return;
+  }
+  Node* current = head;
+  while (current->next != nullptr) {
+    current = current->next;
+  }
+  current->next = new Node(value);
+}
+
+void pushBackTail(Node*& head, Node*& tail, int value) {
+  Node* newNode = new Node(value);
+  if (head == nullptr) {
+    head = newNode;
+    tail = newNode;
+  } else {
+    tail->next = newNode;
+    tail = newNode;
+  }
+}
+
+int main() {
+  const int N = 50000;
+  Node* head = nullptr;
+  Node* headT = nullptr;
+  Node* tailT = nullptr;
+
+  auto start = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < N; ++i) pushBack(head, i);
+  auto end = std::chrono::high_resolution_clock::now();
+  
+  auto startT = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < N; ++i) pushBackTail(headT, tailT, i);
+  auto endT = std::chrono::high_resolution_clock::now();
+
+  std::chrono::duration<double> diff = end - start;
+  std::chrono::duration<double> diffT = endT - startT;
+
+  std::println("List Push Back: {}s", diff.count());
+  std::println("Tail List Push Back: {}s", diffT.count());
+
+  // Cleanup
+  while (head != nullptr) {
+    Node* temp = head;
+    head = head->next;
+    delete temp;
+  }
+  while (headT != nullptr) {
+    Node* temp = headT;
+    headT = headT->next;
+    delete temp;
+  }
+  return 0;
+}
+```
+
+## Result
+
+- Tail pointer makes `pushBack` significantly faster
+- Singly list requires traversal to find the end
+- Tail list provides direct access to the end
+
 ## Doubly Linked Lists
 
 - Each node contains two pointers: `next` and `prev`
@@ -115,89 +196,6 @@ void removeValueDoubly(DNode*& head, DNode*& tail, int value) {
   }
 }
 ```
-
-## Performance Comparison
-
-- We compare `pushBack` with and without a tail pointer
-- We compare `removeValue` in singly vs doubly linked lists
-
----
-
-```cpp
-#include <print>
-#include <vector>
-#include <chrono>
-
-class Node {
-public:
-  int data;
-  Node* next;
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
-};
-
-void pushBackSingly(Node*& head, int value) {
-  if (head == nullptr) {
-    head = new Node(value);
-    return;
-  }
-  Node* current = head;
-  while (current->next != nullptr) {
-    current = current->next;
-  }
-  current->next = new Node(value);
-}
-
-void pushBackTail(Node*& head, Node*& tail, int value) {
-  Node* newNode = new Node(value);
-  if (head == nullptr) {
-    head = newNode;
-    tail = newNode;
-  } else {
-    tail->next = newNode;
-    tail = newNode;
-  }
-}
-
-int main() {
-  const int N = 50000;
-  Node* headS = nullptr;
-  Node* headT = nullptr;
-  Node* tailT = nullptr;
-
-  auto startS = std::chrono::high_resolution_clock::now();
-  for (int i = 0; i < N; ++i) pushBackSingly(headS, i);
-  auto endS = std::chrono::high_resolution_clock::now();
-  
-  auto startT = std::chrono::high_resolution_clock::now();
-  for (int i = 0; i < N; ++i) pushBackTail(headT, tailT, i);
-  auto endT = std::chrono::high_resolution_clock::now();
-
-  std::chrono::duration<double> diffS = endS - startS;
-  std::chrono::duration<double> diffT = endT - startT;
-
-  std::println("Singly List Push Back: {}s", diffS.count());
-  std::println("Tail List Push Back: {}s", diffT.count());
-
-  // Cleanup
-  while (headS != nullptr) {
-    Node* temp = headS;
-    headS = headS->next;
-    delete temp;
-  }
-  while (headT != nullptr) {
-    Node* temp = headT;
-    headT = headT->next;
-    delete temp;
-  }
-  return 0;
-}
-```
-
-## Result
-
-- Tail pointer makes `pushBack` significantly faster
-- Singly list requires traversal to find the end
-- Tail list provides direct access to the end
 
 ---
 
