@@ -203,7 +203,6 @@ void removeValueDoubly(DNode*& head, DNode*& tail, int value) {
 
 - Removing a node in a singly list requires finding the predecessor
 - Removing a node in a doubly list is faster if you have the node pointer
-- Doubly lists use more memory per node (extra pointer)
 
 ---
 
