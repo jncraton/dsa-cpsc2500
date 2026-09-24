@@ -9,7 +9,11 @@ learning_objectives:
 
 # Linked List Optimizations
 
-## The Tail Pointer
+---
+
+Discuss weaknesses of linked lists with a partner. What could you imagine improving?
+
+## Tail Pointer
 
 - A singly linked list only tracks the head
 - Appending to the end requires traversing the entire list
