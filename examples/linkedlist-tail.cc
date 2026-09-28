@@ -1,28 +1,28 @@
+#include <chrono>
 #include <print>
 #include <vector>
-#include <chrono>
 
 class Node {
 public:
   int data;
-  Node* next;
-  Node(int data, Node* next = nullptr) : data(data), next(next) {}
+  Node *next;
+  Node(int data, Node *next = nullptr) : data(data), next(next) {}
 };
 
-void pushBack(Node*& head, int value) {
+void pushBack(Node *&head, int value) {
   if (head == nullptr) {
     head = new Node(value);
     return;
   }
-  Node* current = head;
+  Node *current = head;
   while (current->next != nullptr) {
     current = current->next;
   }
   current->next = new Node(value);
 }
 
-void pushBackTail(Node*& head, Node*& tail, int value) {
-  Node* newNode = new Node(value);
+void pushBackTail(Node *&head, Node *&tail, int value) {
+  Node *newNode = new Node(value);
   if (head == nullptr) {
     head = newNode;
     tail = newNode;
@@ -34,16 +34,18 @@ void pushBackTail(Node*& head, Node*& tail, int value) {
 
 int main() {
   const int N = 50000;
-  Node* head = nullptr;
-  Node* headT = nullptr;
-  Node* tailT = nullptr;
+  Node *head = nullptr;
+  Node *headT = nullptr;
+  Node *tailT = nullptr;
 
   auto start = std::chrono::high_resolution_clock::now();
-  for (int i = 0; i < N; ++i) pushBack(head, i);
+  for (int i = 0; i < N; ++i)
+    pushBack(head, i);
   auto end = std::chrono::high_resolution_clock::now();
-  
+
   auto startT = std::chrono::high_resolution_clock::now();
-  for (int i = 0; i < N; ++i) pushBackTail(headT, tailT, i);
+  for (int i = 0; i < N; ++i)
+    pushBackTail(headT, tailT, i);
   auto endT = std::chrono::high_resolution_clock::now();
 
   std::chrono::duration<double> diff = end - start;
@@ -54,12 +56,12 @@ int main() {
 
   // Cleanup
   while (head != nullptr) {
-    Node* temp = head;
+    Node *temp = head;
     head = head->next;
     delete temp;
   }
   while (headT != nullptr) {
-    Node* temp = headT;
+    Node *temp = headT;
     headT = headT->next;
     delete temp;
   }

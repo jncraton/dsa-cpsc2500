@@ -1,18 +1,18 @@
+#include <chrono>
 #include <print>
 #include <vector>
-#include <chrono>
 
 class DNode {
 public:
   int data;
-  DNode* next;
-  DNode* prev;
-  DNode(int data, DNode* next = nullptr, DNode* prev = nullptr) 
-    : data(data), next(next), prev(prev) {}
+  DNode *next;
+  DNode *prev;
+  DNode(int data, DNode *next = nullptr, DNode *prev = nullptr)
+      : data(data), next(next), prev(prev) {}
 };
 
-void pushBackDoubly(DNode*& head, DNode*& tail, int value) {
-  DNode* newNode = new DNode(value, nullptr, tail);
+void pushBackDoubly(DNode *&head, DNode *&tail, int value) {
+  DNode *newNode = new DNode(value, nullptr, tail);
   if (head == nullptr) {
     head = newNode;
     tail = newNode;
@@ -22,14 +22,18 @@ void pushBackDoubly(DNode*& head, DNode*& tail, int value) {
   }
 }
 
-void removeValueDoubly(DNode*& head, DNode*& tail, int value) {
-  DNode* curr = head;
+void removeValueDoubly(DNode *&head, DNode *&tail, int value) {
+  DNode *curr = head;
   while (curr != nullptr) {
     if (curr->data == value) {
-      if (curr->prev) curr->prev->next = curr->next;
-      if (curr->next) curr->next->prev = curr->prev;
-      if (curr == head) head = curr->next;
-      if (curr == tail) tail = curr->prev;
+      if (curr->prev)
+        curr->prev->next = curr->next;
+      if (curr->next)
+        curr->next->prev = curr->prev;
+      if (curr == head)
+        head = curr->next;
+      if (curr == tail)
+        tail = curr->prev;
       delete curr;
       return;
     }
@@ -39,9 +43,10 @@ void removeValueDoubly(DNode*& head, DNode*& tail, int value) {
 
 int main() {
   const int N = 50000;
-  DNode* headD = nullptr;
-  DNode* tailD = nullptr;
-  for (int i = 0; i < N; ++i) pushBackDoubly(headD, tailD, i);
+  DNode *headD = nullptr;
+  DNode *tailD = nullptr;
+  for (int i = 0; i < N; ++i)
+    pushBackDoubly(headD, tailD, i);
 
   auto start = std::chrono::high_resolution_clock::now();
   removeValueDoubly(headD, tailD, N / 2);
@@ -52,7 +57,7 @@ int main() {
 
   // Cleanup
   while (headD != nullptr) {
-    DNode* temp = headD;
+    DNode *temp = headD;
     headD = headD->next;
     delete temp;
   }
