@@ -11,6 +11,10 @@ learning_objectives:
 
 ---
 
+Think about linked lists as we have discussed them together so far. What are some weaknesses? What could you imagine improving?
+
+---
+
 Discuss weaknesses of linked lists with a partner. What could you imagine improving?
 
 ## Tail Pointer
