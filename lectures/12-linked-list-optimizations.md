@@ -204,7 +204,7 @@ void removeValueDoubly(DNode*& head, DNode*& tail, int value) {
 
 ---
 
-## Doubly List Removal
+## Doubly Linked Removal
 
 - Removing a node in a singly list requires finding the predecessor
 - Removing a node in a doubly list is faster if you have the node pointer
