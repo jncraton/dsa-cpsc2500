@@ -144,7 +144,7 @@ S
 
 ---
 
-![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg){height=96px}
+![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg){height=80px}
 
 ## Doubly Linked Node
 
