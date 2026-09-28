@@ -132,8 +132,9 @@ int main() {
 ## Result
 
 - Tail pointer makes `pushBack` significantly faster
-- Singly list requires traversal to find the end
+- Singly linked list requires traversal to find the end
 - Tail list provides direct access to the end
+S
 
 ## Doubly Linked Lists
 
@@ -143,7 +144,7 @@ int main() {
 
 ---
 
-![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg){height=540px}
+![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg){height=96px}
 
 ## Doubly Linked Node
 
