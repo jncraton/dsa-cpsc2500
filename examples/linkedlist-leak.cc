@@ -40,6 +40,8 @@ int main() {
 
   for (int i = 0; i < 10000000; ++i) {
     head = new Node(42);
+    head->next = new Node(84);
+    leakyRemove(head, 84);
     leakyRemove(head, 42);
 
     if (i % 1000000 == 0) {
