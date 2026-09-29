@@ -8,7 +8,9 @@ learning_objectives:
   - Analyze a program to detect memory leaks
 ---
 
-# Dates
+# Upcoming Dates
+
+---
 
 - No class tomorrow (attend the career fair)
 - Exam next Tuesday (October 6th)
@@ -25,10 +27,12 @@ What happens if we forget to `delete`? What happens if we `delete` twice?
 
 ## Stack vs Heap
 
-- Stack: Automatic allocation and deallocation
-- Heap: Manual allocation and deallocation
-- Stack is faster and managed by the compiler
-- Heap is larger and managed by the programmer
+- Stack
+  - Automatic allocation and deallocation
+  - Smaller and managed by the compiler
+- Heap
+  - Manual allocation and deallocation
+  - Larger and managed by the programmer
 
 ## Allocation
 
