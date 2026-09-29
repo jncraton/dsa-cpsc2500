@@ -161,12 +161,6 @@ void smartPointerExample() {
 }
 ```
 
----
-
-## Exercise
-
-Write a function that allocates an array of 10 integers on the heap, fills them, and returns a pointer. Ensure there is no memory leak.
-
 ## Leaky List Operation
 
 ```cpp
