@@ -165,8 +165,8 @@ void smartPointerExample() {
 
 ```cpp
 #include <print>
-#include <vector>
 #include <sys/resource.h>
+#include <vector>
 
 long peak_memory_kb() {
   rusage usage{};
@@ -176,35 +176,38 @@ long peak_memory_kb() {
 
 struct Node {
   int data;
-  Node* next;
+  Node *next;
   Node(int val) : data(val), next(nullptr) {}
 };
 
-void leakyRemove(Node*& head, int value) {
-  if (head == nullptr) return;
+void leakyRemove(Node *&head, int value) {
+  if (head == nullptr)
+    return;
 
   if (head->data == value) {
-    Node* temp = head;
+    Node *temp = head;
     head = head->next;
     return;
   }
 
-  Node* curr = head;
+  Node *curr = head;
   while (curr->next != nullptr && curr->next->data != value) {
     curr = curr->next;
   }
 
   if (curr->next != nullptr) {
-    Node* temp = curr->next;
+    Node *temp = curr->next;
     curr->next = curr->next->next;
   }
 }
 
 int main() {
-  Node* head = nullptr;
-  
+  Node *head = nullptr;
+
   for (int i = 0; i < 10000000; ++i) {
     head = new Node(42);
+    head->next = new Node(84);
+    leakyRemove(head, 84);
     leakyRemove(head, 42);
 
     if (i % 1000000 == 0) {
