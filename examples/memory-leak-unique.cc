@@ -1,5 +1,5 @@
-#include <print>
 #include <memory>
+#include <print>
 #include <sys/resource.h>
 
 long peak_memory_kb() {
@@ -8,9 +8,7 @@ long peak_memory_kb() {
   return usage.ru_maxrss;
 }
 
-void leakMemory() { 
-  std::unique_ptr<int> ptr = std::make_unique<int>(42);
-}
+void leakMemory() { std::unique_ptr<int> ptr = std::make_unique<int>(42); }
 
 int main() {
   for (int i = 0; i <= 10000000; ++i) {
