@@ -99,9 +99,8 @@ int main() {
   std::println("Value: {}", *ptr);
   delete ptr;
   std::println("Value: {}", *ptr);
-}```
-
----
+}
+```
 
 ## Manual Management
 
@@ -194,7 +193,6 @@ void leakyRemove(Node *&head, int value) {
     return;
 
   if (head->data == value) {
-    Node *temp = head;
     head = head->next;
     return;
   }
@@ -205,7 +203,6 @@ void leakyRemove(Node *&head, int value) {
   }
 
   if (curr->next != nullptr) {
-    Node *temp = curr->next;
     curr->next = curr->next->next;
   }
 }
