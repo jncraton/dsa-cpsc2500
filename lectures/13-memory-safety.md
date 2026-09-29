@@ -43,7 +43,6 @@ What happens if we forget to `delete`? What happens if we `delete` twice?
 ```cpp
 void leakMemory() {
   int* ptr = new int(42);
-  // ptr goes out of scope, but memory is still allocated
 }
 ```
 
