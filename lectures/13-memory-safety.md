@@ -186,7 +186,6 @@ void leakyRemove(Node*& head, int value) {
   if (head->data == value) {
     Node* temp = head;
     head = head->next;
-    // Missing: delete temp;
     return;
   }
 
@@ -198,7 +197,6 @@ void leakyRemove(Node*& head, int value) {
   if (curr->next != nullptr) {
     Node* temp = curr->next;
     curr->next = curr->next->next;
-    // Missing: delete temp;
   }
 }
 
@@ -225,7 +223,6 @@ int main() {
 - The `leakyRemove` function removes a node from the list
 - It updates the pointers correctly
 - It fails to call `delete` on the removed node
-- Every even number removed results in a memory leak
 
 ---
 
