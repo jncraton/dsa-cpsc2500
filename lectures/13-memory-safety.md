@@ -8,6 +8,11 @@ learning_objectives:
   - Analyze a program to detect memory leaks
 ---
 
+# Dates
+
+- No class tomorrow (attend the career fair)
+- Exam next Tuesday (October 6th)
+
 # Memory Safety
 
 ---
