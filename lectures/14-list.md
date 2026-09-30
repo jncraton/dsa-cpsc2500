@@ -95,42 +95,53 @@ int main() {
 
 ## Result
 
-- Traversal is linear
+- Traversal takes longer for longer lists
 - The cost is proportional to the size of the list
 
 ## Inserting at End
 
 - `push_back` adds to the end
 - Fast because it only updates pointers
-- Constant time operation
+
+## Measuring Insert
+
+```cpp
+#include <chrono>
+#include <list>
+#include <print>
+#include <vector>
+
+int main() {
+  constexpr int count = 1'000;
+
+  std::list<int> l;
+  std::vector<int> v;
+
+  auto start = std::chrono::high_resolution_clock::now();
+  for (int i = 0; i < count; ++i) {
+    l.push_front(1);
+  }
+  auto list_end = std::chrono::high_resolution_clock::now();
+
+  for (int i = 0; i < count; ++i) {
+    v.insert(v.begin(), 1);
+  }
+  auto vector_end = std::chrono::high_resolution_clock::now();
+
+  std::chrono::duration<double> list_time = list_end - start;
+  std::chrono::duration<double> vector_time = vector_end - list_end;
+
+  std::println("std::list: {}s", list_time.count());
+  std::println("std::vector: {}s", vector_time.count());
+
+  return 0;
+}
+```
 
 ## Inserting at Start
 
 - `push_front` adds to the beginning
 - Fast because it only updates pointers
-- Constant time operation
-
-## Measuring Insert
-
-```cpp
-#include <print>
-#include <list>
-#include <chrono>
-
-int main() {
-  std::list<int> l;
-  auto start = std::chrono::high_resolution_clock::now();
-
-  for (int i = 0; i < 1e3; i++) {
-    l.push_front(1);
-  }
-
-  auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> diff = end - start;
-  std::println("Time: {}s", diff.count());
-  return 0;
-}
-```
 
 ## Exercise
 
