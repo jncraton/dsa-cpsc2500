@@ -17,7 +17,7 @@ int main() {
 
   std::chrono::duration<double> list_time = list_end - start;
   std::println("std::list: {}s", list_time.count());
-  
+
   for (int i = 0; i < count; ++i) {
     v.insert(v.begin(), 1);
   }

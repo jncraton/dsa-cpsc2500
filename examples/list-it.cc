@@ -1,6 +1,6 @@
-#include <print>
-#include <list>
 #include <chrono>
+#include <list>
+#include <print>
 
 int main() {
   std::list<int> l(10000000);

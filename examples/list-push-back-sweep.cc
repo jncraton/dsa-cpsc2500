@@ -1,6 +1,6 @@
-#include <print>
-#include <list>
 #include <chrono>
+#include <list>
+#include <print>
 
 std::chrono::duration<double> bench(int size) {
   std::list<int> l;
@@ -15,7 +15,7 @@ std::chrono::duration<double> bench(int size) {
 }
 
 int main() {
-  for (int i = 1000; i <= 100000000; i*=10) {
+  for (int i = 1000; i <= 100000000; i *= 10) {
     std::println("Time: {}s Length: {}", bench(i), i);
   }
   return 0;
