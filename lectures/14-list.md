@@ -103,7 +103,7 @@ int main() {
 - `push_back` adds to the end
 - Fast because it only updates pointers
 
-## Measuring Insert
+## Measuring push_front
 
 ```cpp
 #include <chrono>
