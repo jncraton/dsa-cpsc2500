@@ -128,10 +128,6 @@ int main() {
 
 - `push_front` adds to the beginning
 - Fast because it only updates pointers
-
-## Result
-
-- Inserting at the front is very efficient
 - Avoid `std::vector` for frequent front-insertions
 
 ## Removing from End
