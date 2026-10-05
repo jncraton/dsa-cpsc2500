@@ -129,10 +129,6 @@ int main() {
 - `push_front` adds to the beginning
 - Fast because it only updates pointers
 
-## Exercise
-
-Modify the code to time the runtime for various numbers of insertions. How does the time change as a function of insertions?
-
 ## Result
 
 - Inserting at the front is very efficient
