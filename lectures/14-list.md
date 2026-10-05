@@ -169,10 +169,6 @@ int main() {
 - Removes the first element
 - Fast because it only updates pointers
 
----
-
-How would you expect this to perform?
-
 ## Measuring Erase
 
 ```cpp
@@ -200,15 +196,6 @@ int main() {
   return 0;
 }
 ```
-
-## Exercise
-
-How does performance change with size?
-
-## Result
-
-- Erasing from the front is efficient
-- Use `std::list` if front-removal is frequent
 
 ## Summary of Costs
 
