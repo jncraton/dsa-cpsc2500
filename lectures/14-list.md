@@ -19,19 +19,7 @@ reading: '[std::list](https://en.cppreference.com/cpp/container/list)'
 
 - [std::list Documentation](https://en.cppreference.com/cpp/container/list)
 
-## Measuring Time
-
-- We use wall-clock time
-- Measures actual time elapsed
-- Helps us see the "cost" of code
-
-## Measuring Tool
-
-- `std::chrono` library
-- High-resolution clocks
-- Captures time before and after
-
-## Example Code
+# Push Back
 
 ```cpp
 #include <print>
@@ -60,9 +48,7 @@ Modify the code to time the runtime for various sizes of list. How does the time
 ## Result
 
 - `push_back` is generally very fast
-- How long does it take to add one element?
-- 1 million?
-- 1 billion?
+- Time increases as we call it more times
 
 ## Accessing Elements
 
