@@ -1,5 +1,5 @@
 ---
-reading: [Quickstart for pull requests](https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart)
+reading: '[Quickstart for pull requests](https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart)'
 teaching_goal: Students will understand the lifecycle of a GitHub pull request.
 learning_objectives:
   - Identify the purpose of a pull request
