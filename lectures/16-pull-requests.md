@@ -87,4 +87,4 @@ git push --set-upstream origin YOUR-BRANCH-NAME
 
 ---
 
-Why is it better to use small pull requests instead of one large one?
+Why might it be better to use small pull requests instead of one large one?
