@@ -38,13 +38,6 @@ git checkout -b YOUR-BRANCH-NAME
 
 - Make changes on your branch
 - Keep changes focused and simple
-- Smaller requests are easier to review
-
-## Committing Changes
-
-- Save work in small snapshots
-- Each commit needs a message
-- Describe the change clearly
 
 ## Local Commit
 
@@ -74,7 +67,6 @@ git push --set-upstream origin YOUR-BRANCH-NAME
 ## Addressing Feedback
 
 - Reviewers may suggest changes
-- Click Commit suggestion to accept
 - Push new commits to update PR
 - Mark conversations as Resolved
 
