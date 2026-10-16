@@ -1,9 +1,9 @@
-#include <iostream>
-#include <list>
 #include <algorithm>
+#include <iostream>
 #include <iterator>
+#include <list>
 
-void bubblesort(std::list<int>& list) {
+void bubblesort(std::list<int> &list) {
   bool swapped = true;
   while (swapped) {
     swapped = false;
