@@ -38,6 +38,10 @@ learning_objectives:
 
 > Bubble Sort is often taught to novice programmers in introductory computer science courses. This is unfortunate, because Bubble Sort has no redeeming features whatsoever.
 
+---
+
+<iframe width="854" height="540" src="https://www.youtube.com/embed/lyZQPjUT5B4?si=e6bLFCNEyGz-SiLj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Complexity
 
 - Generally requires $n^2$ swaps
