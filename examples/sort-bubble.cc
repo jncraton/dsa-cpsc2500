@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iterator>
 #include <list>
+#include <print>
 
 void bubblesort(std::list<int> &list) {
   bool swapped = true;
@@ -24,7 +25,7 @@ int main() {
   std::list<int> data = {64, 34, 25, 12, 22, 11, 90};
   bubblesort(data);
   for (int n : data) {
-    std::cout << n << " ";
+    std::println("{}", n);
   }
   return 0;
 }
