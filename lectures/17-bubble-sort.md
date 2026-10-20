@@ -50,7 +50,7 @@ learning_objectives:
 
 ```cpp
 #include <algorithm>
-#include <iostream>
+#include <print>
 #include <iterator>
 #include <list>
 
@@ -75,7 +75,7 @@ int main() {
   std::list<int> data = {64, 34, 25, 12, 22, 11, 90};
   bubblesort(data);
   for (int n : data) {
-    std::cout << n << " ";
+    std::println("{}", n);
   }
   return 0;
 }
