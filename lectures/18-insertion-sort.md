@@ -28,10 +28,16 @@ learning_objectives:
 ## Mechanism
 
 - Iterates through the list
-- Takes current record
-- Compares with preceding records
+- Compares current record with preceding records
 - Moves left until correct spot
-- Maintains sorted prefix
+
+---
+
+![Insertion Sort Animation](https://upload.wikimedia.org/wikipedia/commons/2/25/Insertion_sort_animation.gif){height=540px}
+
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/ROalU379l3U?si=txHFmjfX8R3nw1Tx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Implementation
 
