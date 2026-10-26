@@ -66,7 +66,7 @@ int main() {
 
 - Few record swaps
 - $n-1$ total swaps
-- Always performs $n^2$ comparisons
+- $n^2$ comparisons
 - Simple to implement
 
 ---
