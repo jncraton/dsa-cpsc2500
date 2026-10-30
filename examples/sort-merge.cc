@@ -2,18 +2,19 @@
 #include <print>
 #include <vector>
 
-void mergesort(std::vector<int> &A, std::vector<int> &tmp, int first,
-               int last) {
-
-  // Base case, 1 item already "sorted"
+// Internal recursive function that handles the actual merging logic
+void mergesort_recursive(std::vector<int> &A, std::vector<int> &tmp, int first,
+                         int last) {
+  // Base case: 1 item already "sorted"
   if (first >= last) {
     return;
   }
 
   // Compute midpoint and sort halves
+  // Using unsigned int for mid to ensure it handles indices correctly
   unsigned int mid = first + (last - first) / 2;
-  mergesort(A, tmp, first, mid);
-  mergesort(A, tmp, mid + 1, last);
+  mergesort_recursive(A, tmp, first, mid);
+  mergesort_recursive(A, tmp, mid + 1, last);
 
   // Merge sorted halves
   unsigned int left_idx = first;
@@ -52,10 +53,24 @@ void mergesort(std::vector<int> &A, std::vector<int> &tmp, int first,
   }
 }
 
+// Public interface: takes only the array to sort and farms out the work
+void mergesort(std::vector<int> &A) {
+  if (A.empty()) {
+    return;
+  }
+
+  // Allocate auxiliary memory once
+  std::vector<int> tmp(A.size());
+
+  // Farm out the work to the recursive function
+  mergesort_recursive(A, tmp, 0, static_cast<int>(A.size()) - 1);
+}
+
 int main() {
   std::vector<int> data = {64, 34, 25, 12, 22, 11, 90};
-  std::vector<int> tmp(data.size(), 0);
-  mergesort(data, tmp, 0, data.size() - 1);
+
+  mergesort(data);
+
   for (int n : data) {
     std::println("{}", n);
   }
