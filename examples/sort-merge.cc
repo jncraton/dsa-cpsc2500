@@ -16,36 +16,37 @@ void mergesort(std::vector<int> &A, std::vector<int> &tmp, int first,
   mergesort(A, tmp, mid + 1, last);
 
   // Merge sorted halves
-  unsigned int i = first;
-  unsigned int j = mid + 1;
-  unsigned int k = first;
+  unsigned int left_idx = first;
+  unsigned int right_idx = mid + 1;
+  unsigned int merged_idx = first;
 
-  // Actve merging
-  while (i <= mid && j <= last) {
-    if (A[i] <= A[j]) {
-      tmp[k] = A[i];
-      i++;
+  // Active merging
+  while (left_idx <= mid && right_idx <= last) {
+    if (A[left_idx] <= A[right_idx]) {
+      tmp[merged_idx] = A[left_idx];
+      left_idx++;
     } else {
-      tmp[k] = A[j];
-      j++;
+      tmp[merged_idx] = A[right_idx];
+      right_idx++;
     }
-    k++;
+    merged_idx++;
   }
 
-  // Merge left side
-  while (i <= mid) {
-    tmp[k] = A[i];
-    i++;
-    k++;
+  // Merge remaining elements from the left side
+  while (left_idx <= mid) {
+    tmp[merged_idx] = A[left_idx];
+    left_idx++;
+    merged_idx++;
   }
 
-  // Or merge right side
-  while (j <= last) {
-    tmp[k] = A[j];
-    j++;
-    k++;
+  // Or merge remaining elements from the right side
+  while (right_idx <= last) {
+    tmp[merged_idx] = A[right_idx];
+    right_idx++;
+    merged_idx++;
   }
 
+  // Copy the merged elements back into the original array
   for (unsigned int m = first; m <= last; ++m) {
     A[m] = tmp[m];
   }
@@ -53,8 +54,8 @@ void mergesort(std::vector<int> &A, std::vector<int> &tmp, int first,
 
 int main() {
   std::vector<int> data = {64, 34, 25, 12, 22, 11, 90};
-  std::vector<int> tmp = {0, 0, 0, 0, 0, 0, 0};
-  mergesort(data, tmp, 0, 6);
+  std::vector<int> tmp(data.size(), 0);
+  mergesort(data, tmp, 0, data.size() - 1);
   for (int n : data) {
     std::println("{}", n);
   }
