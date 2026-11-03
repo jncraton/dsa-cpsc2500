@@ -1,5 +1,5 @@
 ---
-reading: '[Merge Sort](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Mergesort.html)'
+reading: '[Merge Sort](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Mergesort.html), [Implementing Merge Sort](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/MergesortImpl.html)'
 teaching_goal: Students will understand the divide and conquer strategy of Merge Sort.
 learning_objectives:
   - Describe the divide and conquer strategy
