@@ -1,5 +1,5 @@
 ---
-reading: '[Merge Sort](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/MergeSort.html)'
+reading: '[Merge Sort](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Mergesort.html)'
 teaching_goal: Students will understand the divide and conquer strategy of Merge Sort.
 learning_objectives:
   - Describe the divide and conquer strategy
@@ -38,6 +38,18 @@ learning_objectives:
   2. Sort left half
   3. Sort right half
   4. Merge halves
+
+---
+
+![Merge Sort Animation](https://upload.wikimedia.org/wikipedia/commons/8/8e/Merge_sort_animation.gif){height=540px}
+
+---
+
+![Merge Sort Animation](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif){height=540px}
+
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/XaqR3G_NVoo?si=H7PAtJm_0k4ZX_lB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Recursive Implementation
 

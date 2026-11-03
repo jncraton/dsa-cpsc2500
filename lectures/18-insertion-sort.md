@@ -37,6 +37,10 @@ learning_objectives:
 
 ---
 
+![Insertion Sort Animation](https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif){height=540px}
+
+---
+
 <iframe width="960" height="540" src="https://www.youtube.com/embed/ROalU379l3U?si=txHFmjfX8R3nw1Tx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Implementation
