@@ -163,7 +163,6 @@ void mergesort(std::vector<int> &A) {
 - Time: $O(n \log n)$
 - Best/Average/Worst case: $O(n \log n)$
 - Space: $O(n)$ for auxiliary array
-- Stable sort: Yes
 
 ## Comparison
 
