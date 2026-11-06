@@ -13,9 +13,8 @@ learning_objectives:
 ## Overview
 
 - Divide and conquer algorithm
-- Faster than Mergesort in average case
 - Space efficient (in-place)
-- Widely used in standard libraries (e.g., UNIX qsort)
+- Widely used in standard libraries
 
 ## Divide and Conquer
 
