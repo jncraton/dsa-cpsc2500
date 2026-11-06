@@ -10,7 +10,7 @@ def get_reading(lecture):
     """Returns the url for any reading from yaml metadata in lecture"""
 
     with open(lecture) as f:
-        md = "".join(f.readlines()[:10])
+        md = "".join(f.readlines()[:15])
 
         matches = re.match(r"\-\-\-.*?(\.\.\.|\-\-\-)", md, flags=re.M | re.DOTALL)
 
