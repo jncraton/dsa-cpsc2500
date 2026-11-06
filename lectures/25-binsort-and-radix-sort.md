@@ -22,7 +22,7 @@ learning_objectives:
 
 - Works for permutations of $0$ to $n-1$
 - Direct mapping: $B[A[i]] = A[i]$
-- Time complexity: $\O(n)$
+- Time complexity: $O(n)$
 - Very efficient but highly restricted
 
 ## Extended Binsort
@@ -30,12 +30,12 @@ learning_objectives:
 - Handles duplicate keys
 - Handles keys in range $0$ to $MaxKeyValue$
 - Uses linked lists for bins
-- Complexity: $\O(n + MaxKeyValue)$
+- Complexity: $O(n + MaxKeyValue)$
 
 ## Binsort Limitations
 
 - Performance degrades as $MaxKeyValue$ grows
-- If $MaxKeyValue = n^2$, complexity is $\O(n^2)$
+- If $MaxKeyValue = n^2$, complexity is $O(n^2)$
 - Large key ranges require massive memory for bins
 - Not practical for large, sparse key ranges
 
@@ -74,7 +74,7 @@ learning_objectives:
 ## Radix Sort Analysis
 
 - If $n$ unique keys exist, $k \geq \log_r n$
-- General complexity: $\Omega(n \log n)$
+- General complexity: $O(n \log n)$
 - Best performance when $r$ is large (e.g., $2^{16}$)
 - Requires $n$ to be large relative to key size
 
