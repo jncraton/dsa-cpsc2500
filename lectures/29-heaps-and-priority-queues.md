@@ -70,7 +70,7 @@ learning_objectives:
 - Swap root with last element
 - Decrease heap size
 - Sift down new root
-- Time complexity: $\Theta(\log n)$
+- Time complexity: $O(\log n)$
 
 ## Build Heap Algorithm
 
@@ -91,7 +91,7 @@ learning_objectives:
 | Operation | Insertion Method | Build Method |
 | --- | --- | --- |
 | Strategy | Top-down | Bottom-up |
-| Complexity | $\Theta(n \log n)$ | $\Theta(n)$ |
+| Complexity | $O(n \log n)$ | $O(n)$ |
 | Use Case | Dynamic additions | Static initialization |
 
 ## Exercise
