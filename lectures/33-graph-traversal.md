@@ -1,6 +1,6 @@
 ---
 reading: '[Graph Traversals](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/GraphTraversal.html)'
-teaching_goal: Students will understand the fundamental graph traversal algorithms: DFS and BFS.
+teaching_goal: Students will understand the fundamental graph traversal algorithms
 learning_objectives:
   - Describe the difference between DFS and BFS
   - Explain the use of stacks and queues in traversals
