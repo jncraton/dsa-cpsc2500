@@ -21,6 +21,10 @@ learning_objectives:
 
 ![2022 NASA Theia Collision Simulation](https://upload.wikimedia.org/wikipedia/commons/9/9f/NASA_supercomputer_simulation_on_how_the_Moon_formed.webm){height=540px}
 
+---
+
+![n-body problem](https://upload.wikimedia.org/wikipedia/commons/f/f9/N-body_problem_(3).gif){height=348px}
+
 ## Asymptotic Analysis
 
 - Study of algorithms as $n$ reaches a limit
