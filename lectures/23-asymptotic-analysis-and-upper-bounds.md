@@ -80,10 +80,9 @@ learning_objectives:
 
 ## Context Matters
 
-- "Best at what?"
-- Growth rate depends on input class
+- Growth rate may depend on input
 - Best case, average case, or worst case
-- Statements must specify the context
+- Statements should specify the context
 
 ## Tightness
 
@@ -94,35 +93,32 @@ learning_objectives:
 
 ## Simplifying Rule 1
 
+- Transitive property of bounds
 - If $f(n) \in O(g(n))$ and $g(n) \in O(h(n))$
 - Then $f(n) \in O(h(n))$
-- Transitive property of bounds
 
 ## Simplifying Rule 2
 
+- Ignore multiplicative constants
 - If $f(n) \in O(k \cdot g(n))$ for $k > 0$
 - Then $f(n) \in O(g(n))$
-- Ignore multiplicative constants
 
 ## Simplifying Rule 3
 
+- Sequence of operations: keep the most expensive
 - If $f_1(n) \in O(g_1(n))$ and $f_2(n) \in O(g_2(n))$
 - Then $f_1(n) + f_2(n) \in O(\max(g_1(n), g_2(n)))$
-- Sequence of operations: keep the most expensive
 
 ## Simplifying Rule 4
 
+- Used for nested loops
 - If $f_1(n) \in O(g_1(n))$ and $f_2(n) \in O(g_2(n))$
 - Then $f_1(n) \cdot f_2(n) \in O(g_1(n) \cdot g_2(n))$
-- Used for nested loops
 
 ## Summary Rules
 
 - Ignore constants
 - Ignore lower-order terms
-- $T(n) = 3n^4 + 5n^2$ is $O(n^4)$
-- Higher-order terms swamp lower-order terms
-- Focus on the dominant term
 
 ## Exercise
 
