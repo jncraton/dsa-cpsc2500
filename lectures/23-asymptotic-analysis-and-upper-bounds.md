@@ -105,7 +105,7 @@ learning_objectives:
 
 ## Simplifying Rule 3
 
-- Sequence of operations: keep the most expensive
+- Higher-order terms dominate
 - If $f_1(n) \in O(g_1(n))$ and $f_2(n) \in O(g_2(n))$
 - Then $f_1(n) + f_2(n) \in O(\max(g_1(n), g_2(n)))$
 
