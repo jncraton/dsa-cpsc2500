@@ -15,33 +15,32 @@ learning_objectives:
 - Constants matter for small inputs
 - Growth rates matter for large inputs
 - Faster hardware doesn't change growth rates
-- Asymptotic analysis focuses on "getting big"
+- Asymptotic analysis focuses on large inputs
 
-## Ignoring Constants
+---
 
-- $T(n) = 10n$ vs $T(n) = 2n^2$
-- $2n^2$ eventually surpasses $10n$
-- Constant factors only shift intersection points
-- We ignore constants to simplify analysis
+![2022 NASA Theia Collision Simulation](https://upload.wikimedia.org/wikipedia/commons/9/9f/NASA_supercomputer_simulation_on_how_the_Moon_formed.webm){height=540px}
 
 ## Asymptotic Analysis
 
 - Study of algorithms as $n$ reaches a limit
 - Simplifies comparison of different algorithms
 - Provides "back of the envelope" estimation
-- Useful for understanding general behavior
+
+## Constants
+
+- $T(n) = 10n$ vs $T(n) = 2n^2$
+- $2n^2$ eventually surpasses $10n$
+- Constant factors only shift intersection points
 
 ## When Constants Matter
 
 - Small input sizes (e.g., sorting 5 records)
 - Large constant factors (e.g., 1000x difference)
-- Practicality vs. theoretical growth rate
-- Be aware of limitations in specific cases
 
 ## Upper Bounds
 
 - Describes the highest growth rate
-- Indicates "worst-case" behavior
 - Notation: $O(f(n))$
 - "In $O(f(n))$ in the worst case"
 
