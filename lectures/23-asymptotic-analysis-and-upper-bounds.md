@@ -115,7 +115,7 @@ learning_objectives:
 - If $f_1(n) \in O(g_1(n))$ and $f_2(n) \in O(g_2(n))$
 - Then $f_1(n) \cdot f_2(n) \in O(g_1(n) \cdot g_2(n))$
 
-## Summary Rules
+## Summary
 
 - Ignore constants
 - Ignore lower-order terms
