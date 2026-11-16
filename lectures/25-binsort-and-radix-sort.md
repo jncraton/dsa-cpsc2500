@@ -33,8 +33,9 @@ learning_objectives:
 
 - Handles duplicate keys
 - Handles keys in range $0$ to $MaxKeyValue$
-- Uses linked lists for bins
 - Complexity: $O(n + MaxKeyValue)$
+
+---
 
 ```cpp
 #include <print>
@@ -104,7 +105,6 @@ int main() {
 
 ## Array-based Radix Sort
 
-- Avoids linked lists for better performance
 - Uses a count array to determine bin boundaries
 - Two passes per digit:
   1. Count occurrences of each digit
@@ -159,13 +159,6 @@ int main() {
   return 0;
 }
 ```
-
-## Radix Sort Analysis
-
-- If $n$ unique keys exist, $k \geq \log_r n$
-- General complexity: $O(n \log n)$
-- Best performance when $r$ is large (e.g., $2^{16}$)
-- Requires $n$ to be large relative to key size
 
 ---
 
