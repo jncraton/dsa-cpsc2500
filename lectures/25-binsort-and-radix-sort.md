@@ -11,6 +11,10 @@ learning_objectives:
 
 # Binsort and Radix Sort
 
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/m4yVlPqeZwo?si=G837NilK_vmIMUhW&amb;start=1364" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Binsort Overview
 
 - Non-comparison based sorting
