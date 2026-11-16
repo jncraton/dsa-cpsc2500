@@ -32,12 +32,48 @@ learning_objectives:
 - Uses linked lists for bins
 - Complexity: $O(n + MaxKeyValue)$
 
+```cpp
+#include <print>
+#include <vector>
+#include <algorithm>
+
+void binsort(std::vector<int>& A) {
+  int max_val = 0;
+  for (int x : A) {
+    if (x > max_val) max_val = x;
+  }
+
+  std::vector<std::vector<int>> bins(max_val + 1);
+  for (int x : A) {
+    bins[x].push_back(x);
+  }
+
+  int idx = 0;
+  for (int i = 0; i <= max_val; ++i) {
+    for (int x : bins[i]) {
+      A[idx++] = x;
+    }
+  }
+}
+
+int main() {
+  std::vector<int> data = {5, 2, 9, 1, 5, 6};
+  binsort(data);
+  for (int n : data) {
+    std::println("{}", n);
+  }
+  return 0;
+}
+```
+
 ## Binsort Limitations
 
 - Performance degrades as $MaxKeyValue$ grows
 - If $MaxKeyValue = n^2$, complexity is $O(n^2)$
 - Large key ranges require massive memory for bins
 - Not practical for large, sparse key ranges
+
+---
 
 ## Radix Sort
 
@@ -58,7 +94,7 @@ learning_objectives:
 ## Radix Sort Complexity
 
 - $k$ digits, $n$ records, radix $r$
-- Time: $\Theta(k \cdot (n + r))$
+- Time: $O(k \cdot (n + r))$
 - $k$ is the number of digits required to represent the max key
 - Efficient when $r$ is large enough to keep $k$ small
 
@@ -71,6 +107,55 @@ learning_objectives:
   2. Place records into auxiliary array
 - Copy back to original array after each pass
 
+---
+
+```cpp
+#include <print>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+void radix_sort(std::vector<int>& A) {
+  if (A.empty()) return;
+
+  int max_val = 0;
+  for (int x : A) {
+    if (x > max_val) max_val = x;
+  }
+
+  int exp = 1;
+  while (max_val / exp > 0) {
+    std::vector<int> output(A.size());
+    std::vector<int> count(10, 0);
+
+    for (size_t i = 0; i < A.size(); ++i) {
+      count[(A[i] / exp) % 10]++;
+    }
+
+    for (int i = 1; i < 10; ++i) {
+      count[i] += count[i - 1];
+    }
+
+    for (int i = A.size() - 1; i >= 0; --i) {
+      output[count[(A[i] / exp) % 10] - 1] = A[i];
+      count[(A[i] / exp) % 10]--;
+    }
+
+    A = output;
+    exp *= 10;
+  }
+}
+
+int main() {
+  std::vector<int> data = {170, 45, 75, 90, 802, 24, 2, 66};
+  radix_sort(data);
+  for (int n : data) {
+    std::println("{}", n);
+  }
+  return 0;
+}
+```
+
 ## Radix Sort Analysis
 
 - If $n$ unique keys exist, $k \geq \log_r n$
@@ -78,10 +163,10 @@ learning_objectives:
 - Best performance when $r$ is large (e.g., $2^{16}$)
 - Requires $n$ to be large relative to key size
 
-## Exercise
+---
 
 A list of 1000 integers has keys in the range 0 to 1,000,000. Which algorithm is more efficient: Binsort or Radix Sort with base 10?
 
-## Exercise
+---
 
 If you are sorting 32-bit integers, what is the minimum number of passes required using Radix Sort with a radix of $2^{16}$?
