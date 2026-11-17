@@ -53,7 +53,7 @@ learning_objectives:
 
 ---
 
-![Complete Binary Tree](https://upload.wikimedia.org/wikipedia/commons/d/d9/Complete_binary2.svg){height=540px}
+![Complete Binary Tree](https://upload.wikimedia.org/wikipedia/commons/d/d9/Complete_binary2.svg){height=480px}
 
 ## Recursive Nature
 
