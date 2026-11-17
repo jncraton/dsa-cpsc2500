@@ -57,10 +57,10 @@ learning_objectives:
 
 ## Recursive Nature
 
-- Recursive data structure: composed of smaller instances of itself
-- List: Empty or (Node + List)
-- Binary Tree: Empty or (Node + Left Tree + Right Tree)
-- Recursive definitions provide models for recursive algorithms
+- Recursive data structure composed of smaller instances of itself
+- List is empty or (Node + List)
+- Binary Tree is empty or (Node + Left Tree + Right Tree)
+- Recursive definitions lend themselves to recursive algorithms
 
 ## Full Binary Tree Theorem
 
@@ -74,20 +74,18 @@ learning_objectives:
 - Base Case: 0 internal nodes $\implies$ 1 leaf
 - Base Case: 1 internal node $\implies$ 2 leaves
 - Hypothesis: $n-1$ internal nodes $\implies$ $n$ leaves
-- Step: Remove a node with 2 leaf children
-- Restore: Add 2 children, node becomes internal
 
 ## Empty Subtrees
 
 - Theorem: Empty Subtrees = Nodes + 1
-- Proof 1: Replace empty subtrees with leaves
+- Proof 1: Replace empty subtrees with leaves and apply full binary tree theorem
 - Proof 2: Total children ($2n$) minus non-empty children ($n-1$)
-- Result: $2n - (n-1) = n+1$
+  - Result: $2n - (n-1) = n+1$
 
-## Exercise
+---
 
 Given a full binary tree with 10 internal nodes, how many leaves does it have?
 
-## Exercise
+---
 
 A binary tree has 15 nodes. How many empty subtrees does it contain?
