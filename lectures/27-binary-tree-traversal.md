@@ -11,12 +11,10 @@ learning_objectives:
 
 # Binary Tree Traversals
 
-## Definition
+## Definitions
 
 - Traversal: Process every node in a tree exactly once
 - Enumeration: A traversal that lists nodes in a specific order
-- Order matters for many applications
-- Recursive nature: Each node is the root of its own subtree
 
 ## Preorder Traversal
 
@@ -27,14 +25,21 @@ learning_objectives:
   2. Recurse on left subtree
   3. Recurse on right subtree
 
+---
+
+![Preorder](https://upload.wikimedia.org/wikipedia/commons/a/ac/Preorder-traversal.gif){height=540px}
+
 ## Inorder Traversal
 
 - Visit order: Left $\rightarrow$ Root $\rightarrow$ Right
-- Use case: Binary Search Trees (prints values in sorted order)
 - Logic:
   1. Recurse on left subtree
   2. Visit current node
   3. Recurse on right subtree
+
+---
+
+![Inorder](https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif){height=540px}
 
 ## Postorder Traversal
 
@@ -44,6 +49,10 @@ learning_objectives:
   1. Recurse on left subtree
   2. Recurse on right subtree
   3. Visit current node
+
+---
+
+![Postorder](https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif){height=540px}
 
 ## Recursive Implementation
 
@@ -56,44 +65,30 @@ void preorder(BinNode* rt) {
 }
 ```
 
-## The Base Case
+## Base Case
 
-- Most common base case: `rt == null`
-- Return immediately
+- `rt == null`
 - An empty subtree requires no processing
 
-## The Recursive Step
+## Recursive Step
 
 - Let the children take care of themselves
 - Do not check if children are null before recursing
 - The recursive call handles the null check as its base case
 
-## Bad Practice: Redundant Checks
+## Avoid Redundant Checks
 
 ```cpp
 // Avoid this pattern
-void preorder2(BinNode* rt) {
+void preorder(BinNode* rt) {
   visit(rt);
   if (rt->left != null) preorder2(rt->left);
   if (rt->right != null) preorder2(rt->right);
 }
 ```
 
----
+## Problems
 
-- Why it is bad?
-  - Fails if the initial root is null
-  - Accesses child pointers twice
-  - Increases complexity without performance gain
-
-## Exercise
-
-Write a preorder traversal that prints the value of each node.
-
-## Exercise
-
-Given a tree where you must delete all nodes, which traversal is required?
-
-## Exercise
-
-A tree has nodes A, B, C. A is root. B is left child. C is right child. List the inorder traversal.
+- Fails if the initial root is null
+- Accesses child pointers twice
+- Increases complexity without performance gain
