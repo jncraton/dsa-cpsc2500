@@ -24,9 +24,7 @@ learning_objectives:
 
 - Maintains a sorted structure
 - Allows for efficient searching
-- Left child is smaller
-- Right child is larger
-- Duplicate keys: typically inserted into the left subtree
+- Duplicate keys are typically inserted into the left subtree
 
 ## Search Operation
 
@@ -67,6 +65,18 @@ learning_objectives:
   - Find successor (smallest in right subtree)
   - Replace node's value with successor's value
   - Remove successor node
+
+---
+
+![Delete Leaf](https://commons.wikimedia.org/wiki/File:Bstreedeleteleafexample.jpg){height=540px}
+
+---
+
+![Delete with One Child](https://commons.wikimedia.org/wiki/File:Bstreedeleteonechildexample.jpg){height=540px}
+
+---
+
+![Delete with Two Children](https://commons.wikimedia.org/wiki/File:Bstreedeletenotrightchildexample.jpg){height=540px}
 
 ## Successor Logic
 
