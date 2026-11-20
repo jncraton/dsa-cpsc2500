@@ -122,12 +122,12 @@ learning_objectives:
 - AVL trees and Splay trees maintain balance
 - 2-3 Trees are another balanced alternative
 
-## Exercise
+---
 
 A BST is built by inserting: 50, 30, 70, 20, 40, 60, 80
 
 Draw the resulting tree
 
-## Exercise
+---
 
 What is the time complexity to insert 100 elements into a BST if they are inserted in strictly increasing order?
