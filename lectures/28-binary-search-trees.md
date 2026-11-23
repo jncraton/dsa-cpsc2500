@@ -14,8 +14,7 @@ learning_objectives:
 
 ## Definition
 
-- A binary search tree (BST) is a binary tree
-- It follows a specific ordering property
+- A binary search tree (BST) is a binary tree that follows a specific ordering property
 - Left subtree: all keys $\le$ root key
 - Right subtree: all keys $>$ root key
 - Inorder traversal of a BST yields sorted order
@@ -24,7 +23,6 @@ learning_objectives:
 
 - Maintains a sorted structure
 - Allows for efficient searching
-- Duplicate keys are typically inserted into the left subtree
 
 ## Search Operation
 
@@ -68,21 +66,19 @@ learning_objectives:
 
 ---
 
-![Delete Leaf](https://commons.wikimedia.org/wiki/File:Bstreedeleteleafexample.jpg){height=540px}
+![Delete Leaf](https://upload.wikimedia.org/wikipedia/commons/6/6c/Bstreedeleteleafexample.jpg){height=240px}
 
 ---
 
-![Delete with One Child](https://commons.wikimedia.org/wiki/File:Bstreedeleteonechildexample.jpg){height=540px}
+![Delete with One Child](https://upload.wikimedia.org/wikipedia/commons/6/6a/Bstreedeleteonechildexample.jpg){height=240px}
 
 ---
 
-![Delete with Two Children](https://commons.wikimedia.org/wiki/File:Bstreedeletenotrightchildexample.jpg){height=540px}
+![Delete with Two Children](https://upload.wikimedia.org/wikipedia/commons/1/15/Bstreedeletenotrightchildexample.jpg){height=240px}
 
 ## Successor Logic
 
 - `getmax` of left subtree OR `getmin` of right subtree
-- If duplicates are in left, use max of left
-- If duplicates are in right, use min of right
 
 ## Removal Complexity
 
