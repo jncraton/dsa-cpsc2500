@@ -12,6 +12,10 @@ learning_objectives:
 
 # Heaps and Priority Queues
 
+## Storing Complete Trees
+
+- If we can guarantee that tree will remain complete, they can be stored as arrays to save space
+
 ## Priority Queues
 
 - Collection of objects with priorities
