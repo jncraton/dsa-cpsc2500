@@ -1,5 +1,5 @@
 ---
-reading: '[Heaps and Priority Queues](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Heaps.html)'
+reading: '[Complete Binary Tree Array Implementation](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/CompleteTree.html), [Heaps and Priority Queues](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Heaps.html)'
 teaching_goal: Students will understand the heap data structure and its application as a priority queue.
 learning_objectives:
   - Define a heap and its properties
@@ -16,15 +16,14 @@ learning_objectives:
 
 - Collection of objects with priorities
 - Next "most important" item is selected
-- Example: Emergency room triage
-- Example: OS job scheduling
+    - Emergency room triage
+    - OS job scheduling
 
 ## Limitations of Other Structures
 
 - Normal Queue: $O(n)$ to find max
 - Sorted List: $O(n)$ to insert
 - BST: $O(n \log n)$ total for $n$ ops
-- BST Risk: Can become unbalanced
 
 ## The Heap Data Structure
 
@@ -93,15 +92,3 @@ learning_objectives:
 | Strategy | Top-down | Bottom-up |
 | Complexity | $O(n \log n)$ | $O(n)$ |
 | Use Case | Dynamic additions | Static initialization |
-
-## Exercise
-
-A heap has 100 elements. What is the maximum height of the tree?
-
-## Exercise
-
-If you have an array of 10 elements, what is the index of the parent of the element at index 7?
-
-## Exercise
-
-Explain why `buildHeap` is faster than $n$ successive `insert` operations.
