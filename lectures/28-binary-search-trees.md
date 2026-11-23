@@ -101,9 +101,9 @@ learning_objectives:
 - BST can store Key-Value Pairs (KVPairs)
 - Key determines position in tree
 - Value is stored at the node
-- `insert(key, value)`: creates KVPair, inserts into BST
-- `find(key)`: finds KVPair, returns value
-- `remove(key)`: removes KVPair, returns value
+- `insert(key, value)` creates KVPair, inserts into BST
+- `find(key)` finds KVPair, returns value
+- `remove(key)` removes KVPair, returns value
 
 ## Dictionary Advantages
 
@@ -116,7 +116,10 @@ learning_objectives:
 - Unbalanced trees lead to $O(n)$ performance
 - Balanced trees guarantee $O(\log n)$
 - AVL trees and Splay trees maintain balance
-- 2-3 Trees are another balanced alternative
+
+---
+
+![AVL Tree Balancing](https://upload.wikimedia.org/wikipedia/commons/f/fd/AVL_Tree_Example.gif){height=360px}
 
 ---
 
