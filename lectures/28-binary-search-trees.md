@@ -120,13 +120,3 @@ learning_objectives:
 ---
 
 ![AVL Tree Balancing](https://upload.wikimedia.org/wikipedia/commons/f/fd/AVL_Tree_Example.gif){height=360px}
-
----
-
-A BST is built by inserting: 50, 30, 70, 20, 40, 60, 80
-
-Draw the resulting tree
-
----
-
-What is the time complexity to insert 100 elements into a BST if they are inserted in strictly increasing order?
